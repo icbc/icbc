@@ -1,0 +1,20 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+.module-title {position: relative;zoom: 1;}
+.rokchecks.roksubscribe {display:inline-block;}
+
+/* RTL */
+body.rtl span.inset-right-title, body.rtl span.inset-left-title {zoom:1;}
+body.rtl .menutop {direction: ltr;}
+body.rtl #rt-showcase .feature-desc {direction: ltr;text-align: right;float: right;}
+body.rtl .rt-article-content p, body.rtl p, body.rtl blockquote, body.rtl blockquote p, body.rtl .dropcap {direction: ltr;text-align: right;}
+body.rtl .fusion-submenu-wrapper li {text-align: right;}
+body.rtl p {direction: rtl;}
+body.rtl .alert, body.rtl .approved, body.rtl .attention, body.rtl .camera, body.rtl .cart, body.rtl .doc, body.rtl .download, body.rtl .media, body.rtl .note, body.rtl .notice, body.rtl .quote {line-height: 3em;}
+body.rtl ol li {direction: ltr;text-align: right;}

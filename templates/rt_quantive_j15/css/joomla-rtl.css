@@ -1,0 +1,80 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Article */
+body.rtl .rt-joomla .rt-articleinfo2 {float: right;}
+body.rtl .rt-joomla ol {margin-left: 0;margin-right: 5px;}
+
+/* Typography */
+body.rtl .rt-joomla .rt-article-icons {padding: 1px 4px 0 5px;float: left;}
+body.rtl .rt-joomla .edit {margin-right: 0;margin-left: 0;}
+body.rtl #form-login ul li a, body.rtl #com-form-login ul li a, body.rtl ul.rt-more-articles li a, body.rtl .rt-section-list ul li a {padding-left: 0;padding-right: 10px;}
+body.rtl .rt-pollbuttons .readon {float: right;margin-left: 9px;}
+body.rtl .rt-pollrow {direction: ltr;text-align: right;}
+body.rtl .rt-comment-block {float: left;}
+body.rtl .rt-joomla .search_result fieldset.word label {float: right;}
+body.rtl .rt-joomla .label-left {float: right;}
+body.rtl .rt-date-posted span {line-height: 24px;}
+body.rtl .rt-joomla .contact .image {float:left;}
+body.rtl .rt-joomla .search_result select#ordering.inputbox {margin-right: 0;margin-left: 10px;}
+body.rtl #rt-showcase .readon-wrap1 {float: right;}
+body.rtl pre {direction: ltr;text-align: right;}
+body.rtl ul.pagination {text-align: right;}
+body.rtl ul.pagination li {text-align: right;}
+body.rtl .rt-joomla .search_result select#ordering.inputbox {margin-right: 0;margin-left: 10px;}
+
+/* RokAjaxSearch */
+body.rtl .rokajaxsearch {direction: ltr;text-align: right;}
+body.rtl .rokajaxsearch .inputbox {text-align: right;}
+body.rtl #roksearch_results {direction: ltr;text-align: right;}
+body.rtl #rokajaxsearch .roksearch-wrapper {float: right;}
+body.rtl .search_options {float: right;}
+body.rtl .search_options label {margin-left:8px;margin-right: 0;}
+body.rtl #rokajaxsearch #roksearch_search_str.loading {background-position: 5px 50% !important;}
+body.rtl #roksearch_results a#roksearch_link {float: left;padding-right: 0;padding-left: 5px;background-position: 100% -50px;}
+body.rtl #roksearch_results .container-arrows {float: right;margin-right: 0;margin-left: 5px;}
+body.rtl #roksearch_results a.viewall {float: right;}
+
+/* RokNewsPager */
+body.rtl ul.roknewspager {padding-right: 0;}
+body.rtl .roknewspager-pages2 {margin-left: 0;margin-right: 20px;float: left;}
+body.rtl .roknewspager-div a img {float: right;margin-right: 0;margin-left: 15px;}
+body.rtl .roknewspager-spinner {float: right;}
+body.rtl .roknewspager-prev, body.rtl .roknewspager-prev-disabled {right: 0;left: inherit;}
+body.rtl .roknewspager-next, body.rtl .roknewspager-next-disabled {left: 0;right: inherit;}
+body.rtl .roknewspager-prev-disabled, body.rtl .roknewspager-next-disabled {background-position: 5px 8px !important;}
+body.rtl .roknewspager-prev, body.rtl .roknewspager-next {background-position: 5px -464px !important;}
+body.rtl .square3 .roknewspager-next-disabled, body.rtl .square4 .roknewspager-next-disabled, body.rtl .square6 .roknewspager-next-disabled {background-position: 6px 6px !important;}
+body.rtl .square3 .roknewspager-next, body.rtl .square4 .roknewspager-next, body.rtl .square6 .roknewspager-next {background-position: 6px -464px !important;}
+body.rtl .square3 .roknewspager-prev-disabled, body.rtl .square4 .roknewspager-prev-disabled, body.rtl .square6 .roknewspager-prev-disabled {background-position: 3px 6px !important;}
+body.rtl .square3 .roknewspager-prev, body.rtl .square4 .roknewspager-prev, body.rtl .square6 .roknewspager-prev {background-position: 3px -464px !important;}
+
+/* RokStories */
+body.rtl .rokstories-layout2 .feature-block .readon-main {margin-left: 0;margin-right: 15px;}
+body.rtl .rokstories-layout2 .feature-block .readon-main .readon1-m {margin-left: 0;margin-right: -15px;padding: 0 14px 0 38px;float: right;}
+body.rtl .rokstories-layout2 .feature-block .readon-main:hover {background-position: 0 -39px;}
+body.rtl .rokstories-layout2 .feature-block .readon-main:hover .readon1-m {background-position: 100% -39px;}
+body.rtl .rokstories-layout2 .feature-pad {margin-left: 0;margin-right: 25px;}
+body.rtl .rokstories-layout2 .feature-arrow-r {right: inherit;left: 0;background-position: 0 0;}
+body.rtl .rokstories-layout2 .feature-arrow-l {right: inherit;left: 26px;background-position: -22px 0;}
+body.rtl .rokstories-layout2 .arrowright-hover {background-position: 0 -22px;}
+body.rtl .rokstories-layout2 .arrowleft-hover {background-position: -22px -22px;}
+body.rtl .rokstories-layout2 .image-container {float: right !important;}
+
+/* RokTabs */
+body.rtl .roktabs-wrapper {direction: ltr;text-align: right;}
+body.rtl .roktabs-wrapper .roktabs-links ul li {float: right;}
+body.rtl .roktabs-wrapper .roktabs-links ul li.active {margin: 0 9px 0 0;}
+body.rtl .roktabs-wrapper .roktabs-links ul li.active span {margin-left: 0;margin-right: -9px;}
+body.rtl .roktabs-wrapper .roktabs-links ul li span {padding: 0 15px 0 25px;}
+body.rtl .roktabs-wrapper .tab-icon {margin-right: 0;margin-left: 10px;margin-top: 10px;float: right;}
+
+/* Editing */
+body.rtl .button2-left, body.rtl .button2-right, body.rtl .button2-left div, body.rtl .button2-right div {float: right;}
+body.rtl #editor-xtd-buttons {float: right;}
+body.rtl .edit-article fieldset table {float: right;}

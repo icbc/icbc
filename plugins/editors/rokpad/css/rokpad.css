@@ -1,0 +1,82 @@
+/* Joomla CSS Fixes */
+table.admintable {width: 100%;}
+
+/* RokPad */
+.rokpad {background: #fff;top: 3px;left: 3px;z-index: 5000;min-width:760px;}
+.rokpad .rokpad-topbar {background: #f0f0f0 url(../images/bg-topbar.png) bottom left repeat-x;height: 50px;margin:-3px -3px 0;line-height:50px;text-shadow:1px 1px #fff;padding: 0 10px;border-bottom: 1px solid #bbb;}
+.rokpad .text-formatting {height:26px;margin: -1px -3px 0;border-bottom: 1px solid #bbb;background: #dedede;border-top: 1px solid #bbb;}
+.rokpad .handle {background: url(../images/handle.png) bottom center repeat-x; height: 10px;cursor: ns-resize;margin: 0 -3px;text-align:center;position:relative;z-index:10;}
+.rokpad .handle-center {background: url(../images/handle-center.png) center center no-repeat; width: 10px; height: 10px;cursor: ns-resize;margin: 0 auto;}
+.rokpad .hidden-bar {text-shadow:1px 1px #fff;color:#555;background: #f4f4f4 url(../images/hidden-bar.png) top left repeat-x; margin: 0 -3px 3px; padding: 15px; border-bottom: 1px solid #ccc;height:20px;}
+.rokpad .left-bar {float: left;}
+.rokpad .right-bar {float: right;}
+.rokpad .left-bar, .rokpad .right-bar {margin-top: 15px;}
+.rokpad .text-formatting .left-bar, .rokpad .text-formatting .right-bar {margin: 6px 10px 0 ;}
+.rokpad .left-bar span, .rokpad .right-bar span {display: none;}
+.rokpad .left-bar div, .rokpad .right-bar div {cursor: pointer; width: 16px; height: 16px; margin: 0 5px; float: left;}
+.rokpad .status-bar {background: #ddd;margin: 3px -3px 0;border-top: 1px solid #a5a5a5;height: 20px;text-shadow:1px 1px #fff;line-height: 20px;padding: 0 5px;font-weight: bold;}
+.rokpad .status-bar span {font-weight: normal; padding: 0 2px;}
+.rokpad .status-bar .last-save, .rokpad .status-bar .replaces-status {float: left;}
+.rokpad .status-bar .line {float: right;}
+
+/* Hidden bar */
+.rokpad .hidden-bar .panel {clear: both;display: none;}
+.rokpad .hidden-bar input, .rokpad .hidden-bar select {outline: 0;padding:2px;font-size:11px;background: #fefefe;-moz-border-radius: 7px;-webkit-border-radius: 7px;}
+.rokpad .hidden-bar input:focus, .rokpad .hidden-bar select:focus {background-color: #fefefe;border-color: #999;}
+.rokpad .hidden-bar input.tab-size, .rokpad .hidden-bar input.auto-save-time {width: 25px;text-align: center;}
+.rokpad .hidden-bar .tabs div, .rokpad .hidden-bar .searchPanel div.block {margin-right: 10px;padding-right: 10px; border-right: 1px solid #ccc;}
+.rokpad .hidden-bar .searchPanel div.block {float: left;}
+.rokpad .hidden-bar div div {float: left;}
+
+/* Toolbar */
+.rokpad .left-bar .separator, .rokpad .right-bar .separator {background: url(../icons/separator.png) center center no-repeat; width: 2px; height: 32px; margin: -8px 5px 0;cursor: default;}
+.rokpad .text-formatting .separator {height:20px;margin:-3px 5px 0;}
+.rokpad .fullscreen.out {background: url(../icons/arrow_out.png) center center no-repeat;}
+.rokpad .fullscreen.in {background: url(../icons/arrow_in.png) center center no-repeat;}
+.rokpad .save {background: url(../icons/page_save.png) center center no-repeat;}
+.rokpad .save.disabled {cursor: default;background: url(../icons/page_save_disabled.png) center center no-repeat;}
+.rokpad .save.spinner, .rokpad .save.disabled.spinner, .rokpad .tidy.spinner {background: url(../images/spinner.gif) center center no-repeat;}
+.rokpad .back {background: url(../icons/arrow_back.png) center center no-repeat;}
+.rokpad .forward {background: url(../icons/arrow_forward.png) center center no-repeat;}
+.rokpad .back.disabled {cursor: default; background: url(../icons/arrow_back_disabled.png) center center no-repeat;}
+.rokpad .forward.disabled {cursor: default; background: url(../icons/arrow_forward_disabled.png) center center no-repeat;}
+.rokpad .auto-indent {background: url(../icons/indent.png) center center no-repeat;}
+.rokpad .goto-line {background: url(../icons/page_goto.png) center center no-repeat;}
+.rokpad .search {background: url(../icons/search.png) center center no-repeat;}
+.rokpad .search-replace {background: url(../icons/search_replace.png) center center no-repeat;}
+.rokpad .tidy {background: url(../icons/tidy.png) center center no-repeat;}
+.rokpad .tidy.disabled {background: url(../icons/tidy_disabled.png) center center no-repeat;}
+.rokpad .setup {background: url(../icons/setup.png) center center no-repeat;}
+
+/* Search */
+.search-input {float: left;}
+
+/* Buttons */
+.rokpad .button {line-height: 19px; cursor: pointer;margin-left: 5px;float:left;margin-top:2px;}
+.rokpad .button .button-l, .rokpad .button .button-r {width: 8px; height: 19px;float: left;}
+.rokpad .button .button-c {height:19px;background: url(../images/button-center.png) top left repeat-x;float: left;}
+.rokpad .button .button-l {background: url(../images/button-left.png) top left no-repeat;}
+.rokpad .button .button-r {background: url(../images/button-right.png) top left no-repeat;}
+.rokpad .button:hover {color: #111;}
+.rokpad .button.disabled, .rokpad .button.disabled:hover {color: #999;cursor: default;}
+.rokpad .button.click .button-c, .rokpad .button.click .button-l, .rokpad .button.click .button-r {background-position: bottom left;}
+/* CSS Hack for buttons selections */
+.rokpad .button-c span::-moz-selection {background: transparent;}
+.rokpad .button-c span::selection {background: transparent;}
+
+/* Tooltips */
+.rokpad-tip {position: absolute;z-index: 5000;white-space: nowrap;}
+.rokpad-tip-bubble-left {background: url(../images/tip-left.png) top left no-repeat;width: 13px;height: 28px;position:absolute;left:0;top:0;}
+.rokpad-tip-bubble-right {background: url(../images/tip-right.png) top right no-repeat;width: 13px;height: 28px;position:absolute;right:0;top:0;}
+.rokpad-tip-bubble-center {white-space: nowrap;position:relative;margin:0 13px;}
+.rokpad-tip-bubble-center {background: url(../images/tip-center.png) top center repeat-x;height: 28px;float: left;font-size:16px;line-height:27px;color: #fefefe;text-shadow:1px 1px #666;}
+.rokpad-tip-bubble-arrow {background: url(../images/tip-arrow-down.png) center center no-repeat;height: 6px;clear: both;}
+
+.rokpad-tip-up .rokpad-tip-bubble-arrow {background: url(../images/tip-arrow-up.png) center center no-repeat;height: 6px;clear: none;}
+.rokpad-tip-up .rokpad-tip-bubble-left, .rokpad-tip-up .rokpad-tip-bubble-right {bottom:0;top:auto;}
+
+/* Tidying */
+div.tidying {background-image: url(../images/tidy-wait.png) !important; background-position: center center !important; background-repeat: no-repeat !important;}
+
+/* CodeMirror Styles */
+.CodeMirror-line-numbers {width: 2.2em;color: #aaa;background-color: #eee;text-align: right;padding-right: .3em;font-size: 10pt;font-family: monospace;padding-top: .4em;text-shadow:1px 1px #fff;}

@@ -1,0 +1,11 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* RokTabs */
+body .roktabs-wrapper .roktabs-links ul li.active.last {padding-right: 4px;}
+body.rtl .roktabs-wrapper .roktabs-links ul li.active.last {padding-left: 4px;padding-right: 0;}

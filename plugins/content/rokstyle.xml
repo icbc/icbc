@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - RokStyle Access</name>
+	<author>RocketTheme</author>
+	<creationDate>November 2009</creationDate>
+	<copyright>Copyright (C) 2009 RocketTheme, LLC.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>1.5</version>
+	<files>
+		<filename plugin="rokstyle">rokstyle.php</filename>
+	</files>
+	<description>use {rokstyle}style{/rokstyle} format
+	</description>
+	
+	<params/>
+</install>

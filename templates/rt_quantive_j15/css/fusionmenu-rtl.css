@@ -1,0 +1,27 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Dropdowns */
+body.rtl .menutop ul {padding: 0 0 20px 0;}
+body.rtl .menutop ul.level2 {margin-right: -1px;}
+body.rtl .menutop ul li {margin-left: 0;margin-right: 3px;padding: 2px 5px 2px 0;float: right;}
+body.rtl .menutop ul.columns2 li {float: right;padding-left: 0;padding-right: 5px;margin-left: 0;margin-right: 2px;}
+body.rtl .menutop li > .bullet {padding-left: 0;padding-right: 15px;}
+body.rtl .menutop li > .item img {float: right;margin: 10px 8px 0 6px;}
+
+/* Root Items */
+body.rtl .menutop li.root {float: right;margin: 0 9px 0 0;}
+body.rtl .menutop li.root > .item {;margin: 0 -9px 0 0;}
+body.rtl .menutop li.root > .bullet {padding: 0;background: none;}
+body.rtl .menutop li.parent.root .item span {padding-right: 20px;padding-left: 23px;}
+
+/* No JS */
+body.rtl .menutop li.root:hover > .fusion-submenu-wrapper {top:50px;left: inherit;right:-9px;}
+body.rtl .menutop ul.columns1 li:hover > .fusion-submenu-wrapper {right:180px;left: inherit;top:0;}
+body.rtl .menutop ul.columns2 li:hover > .fusion-submenu-wrapper {right:178px;left: inherit;top:0;}
+body.rtl .menutop.nojs li.parent.root li .item span {padding-left: 0;padding-right: 0;}

@@ -1,0 +1,26 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+.menu-type-splitmenu #rt-navigation li.active a {background: #E3E3E5;color: #444444;}
+.menu-type-splitmenu #rt-submenu li .item {color: #333;}
+
+.menu-type-suckerfishmenu #rt-navigation li.sfHover .item {color: #444444;}
+.menu-type-suckerfishmenu #rt-navigation li.sfHover .item, .menu-type-suckerfishmenu #rt-navigation li#current .item {background: #E3E3E5;border: none;}
+.menu-type-suckerfishmenu #rt-navigation li.sfHover .item span, .menu-type-suckerfishmenu #rt-navigation li#current .item span {border: none;}
+.menu-type-suckerfishmenu #rt-navigation li#current .item {color: #444444;background: #E3E3E5;}
+.menu-type-suckerfishmenu #rt-navigation li ul {background: #E3E3E5;}
+.menu-type-suckerfishmenu #rt-navigation ul ul li .item:hover {background: #444444;color:#fff;}
+.menu-type-suckerfishmenu #rt-navigation ul ul li .daddy:hover {background: #444444;color:#fff;}
+.menu-type-suckerfishmenu #rt-navigation li.sfHover li .item {color: #444444;}
+
+.menu-type-splitmenu .menutop li a, .menu-type-suckerfishmenu .menutop li a {color: #fff;}
+.menu-type-splitmenu .menutop li.active .item span {color: #444444;}
+.menu-type-splitmenu #rt-submenu ul.menu li a{color:#444444;}
+.menu-type-splitmenu #rt-submenu ul.menu li.active a{background:#E3E3E5;}
+.menu-type-splitmenu #rt-submenu ul.menu li.active a span {color: #444444;}
+.menu-type-splitmenu .menutop a.sfHover{background:#E3E3E5;color:#444444;}
+.menu-type-splitmenu #rt-submenu ul.menu li a.sfHover {background:#444444;}
