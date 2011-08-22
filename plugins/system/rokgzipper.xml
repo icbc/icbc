@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - RokGZipper</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>January 30, 2010</creationDate>
+	<copyright>(C) 2005 - 2010 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<version>1.8</version>
+	<description>Plugin to gzip-bundle js and css files</description>
+	<files>
+		<filename plugin="rokgzipper">rokgzipper.php</filename>
+	</files>
+	<languages>
+   		<language tag="en-GB">en-GB.plg_system_rokgzipper.ini</language>
+	</languages>
+	<params>
+	    <param name="cache_time" type="text" default="900" label="Cache Time in Secs" description="" />
+        <param name="expires_header_time" type="text" default="1440" label="Expires Header Time in Minutes" description="" />
+	    <param name="show_contains_comments" type="radio" default="0" label="ROKGZIPPER.LABEL.SHOW_CONTENTS_COMMENTS" description="ROKGZIPPER.DESC.SHOW_CONTENTS_COMMENTS">
+		  <option value="0">No</option>
+		  <option value="1">Yes</option>
+		</param>
+		<param name="ignored_files" type="textarea" default="" label="ROKGZIPPER.LABEL.IGNORED_FILES" description="ROKGZIPPER.DESC.IGNORED_FILES" rows="20" cols="40" />
+        <param name="strip_css" type="radio" default="1" label="ROKGZIPPER.LABEL.STRIP_CSS" description="ROKGZIPPER.DESC.STRIP_CSS">
+		  <option value="0">No</option>
+		  <option value="1">Yes</option>
+		</param>
+	</params>
+</install>

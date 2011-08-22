@@ -1,0 +1,18 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Root Items */
+body.rtl .menutop li, body.rtl .menutop li.active:hover {float: right;margin: 0 9px 0 0;}
+body.rtl .menutop li .item, body.rtl .menutop li.active:hover .item {margin: 0 -9px 0 0;}
+body.rtl .menutop li:hover {margin: 0 8px 0 0;}
+body.rtl .menutop li:hover .item {margin: 0 -8px 0 0;}
+body.rtl .menutop li.parent .item span {padding-right: 20px;padding-left: 23px;}
+
+/* Submenu Items */
+body.rtl #rt-submenu ul.menu li {float: right;margin-left: 19px;margin-right: 0;}
+body.rtl #rt-submenu ul.menu li.parent .item span {padding-right: 20px;padding-left: 22px;}

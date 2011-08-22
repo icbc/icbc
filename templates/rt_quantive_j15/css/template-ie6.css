@@ -1,0 +1,132 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+#rt-navigation, #rt-copyright, .rt-block, #rt-main-surround, #rt-header, #rt-showcase-surround, #rt-showcase, #rt-mainbody, #rt-bottom, #rt-bottom2, .module-surround, .module-title, .rt-surround-top, .rt-surround, .rt-surround-bottom, .module-inner, .rt-main-inner, .rt-content-top, .rt-content-bottom, .module-content, ul.menutop, #rt-submenu, #rt-submenu2, .feature-block, .rokstories-layout2, #rt-feature, #rt-utility {zoom: 1;}
+
+ /* cludge for fixed width empty div */
+#rt-drawer .rt-grid-12 {float: none;}
+
+/* cludge for mainbody jumping */
+#rt-main  {	zoom:1;position: relative;}
+
+/* Content Titles */
+.rt-headline {zoom: 1;}
+
+/* Showcase */
+.rt-surround, .rt-surround2, .rt-surround3 {zoom:1;}
+#rt-showcase {zoom: 1;}
+.rt-surround3{margin-right:-11px;padding-right:2px;}
+
+/* Content */
+.pollstableborder {zoom: 1;}
+.article-rating {position: relative !important;}
+.rt-joomla .rt-articleinfo {width: auto;zoom: 1;}
+.rt-headline, .module-title {position: relative;zoom: 1;}
+#rocket, #gantry-logo{zoom:1;positon:relative;display:inline-block;}
+
+/* Main Body */
+.rt-surround,.rt-surround2,.rt-surround3 {zoom:1;}
+#rt-maintop, #rt-maintop2 {zoom: 1;}
+
+/* Footer */
+.rt-footer-bottom-wrap, .rt-footer-bottom, .rt-footer-bottom2, .rt-footer-bottom3{zoom:1;position:relative;}
+
+/* Top Menus */
+#rt-navigation, #rt-navigation2, #rt-navigation3{zoom:1;}
+#rt-navigation2{margin-left:-8px;}
+.rt-submenu-surround, .rt-submenu-surround2{zoom:1;}
+#rt-navigation {position: relative;z-index: 100;}
+.menu-type-splitmenu .menutop li, .menu-type-suckerfishmenu .menutop li {zoom:1;display:inline-block;}
+.menu-type-splitmenu .menutop li a, .menu-type-suckerfishmenu .menutop li a {zoom:1;display:inline-block;}
+.menu-type-suckerfishmenu .menutop li {border: 0;}
+.menu-type-splitmenu #rt-navigation li span {width: auto;display:inline-block;}
+.menu-type-splitmenu #rt-navigation li .item {display:inline-block;}
+.menu-type-splitmenu #rt-submenu ul.menu li .item span{display:inline-block;width:auto;zoom:1;background:none;}
+.menu-type-splitmenu #rt-submenu ul.menu li a{zoom:1;display:inline-block;background:none;margin-left:5px;}
+.menu-type-splitmenu #rt-submenu ul.menu li {zoom:1;display:inline-block;float:left;}
+
+
+/* Side Menus */
+#rt-main-surround ul.menu li a:hover,
+#rt-main-surround ul.menu li.active li a:hover,
+#rt-main-surround ul.menu li.active li.active li a:hover,
+#rt-main-surround ul.menu li.active a,
+#rt-main-surround ul.menu li.active li.active a,
+#rt-main-surround ul.menu li.active li.active li.active a,
+#rt-main-surround ul.menu li.active li.active li.active li.active a {background:none !important;}
+#rt-main-surround ul.menu li.active li a,
+#rt-main-surround ul.menu li.active li.active li a,
+#rt-main-surround ul.menu li.active li.active li.active li a,
+#rt-main-surround ul.menu li.active li.active li.active li.active a {background:none !important;}
+#rt-main-surround ul.menu li a,
+#rt-main-surround ul.menu li li a,
+#rt-main-surround ul.menu li li li a,
+#rt-main-surround ul.menu li a,
+#rt-main-surround ul.menu li li a,
+#rt-main-surround ul.menu li li li a,
+#rt-main-surround ul.menu li li li li a {background:none !important;}
+#rt-main-surround ul.menu li li a,
+#rt-main-surround ul.menu li li li a,
+#rt-main-surround ul.menu li li li li a,
+#rt-main-surround ul.menu li li li li a {background:none !important;}
+#rt-main-surround ul.menu, #rt-main-surround ul.menu ul {zoom: 1;}
+#rt-main-surround ul.menu {list-style-type:disc !important;}
+
+/* Breadcrumb */
+.rt-breadcrumb-surround {display: inline;}
+
+/* Modules */
+.rt-module-surround{zoom:1;}
+.rt-module-top, .rt-module-bottom{zoom:1;}
+.rt-module-top2, .rt-module-bottom2{zoom:1;}
+.rt-module-top3, .rt-module-bottom3{zoom:1;}
+/* Footer */
+#gantry-resetsettings {display:inline;}
+
+/* Typography */
+.readon-wrap1 {width: 120px !important;}
+
+/* RokTabs */
+.roktabs-links ul.roktabs-top, .roktabs-links ul.roktabs-bottom {zoom:1;position:relative;}
+.roktabs, .roktabs-topbar, .roktabs-topbar2, .roktabs-topbar3, .roktabs-links, ul.roktabs-top {zoom:1;position: relative;}
+.roktabs-wrapper .roktabs-top .tab1, .roktabs-wrapper .roktabs-top .tab2 {float:left;zoom:1;}
+.roktabs-wrapper .roktabs-links ul li {white-space: nowrap;}
+.roktabs-wrapper .roktabs-links ul li span {display: inline-block;}
+
+/* RokNewsPager */
+body div.roknewspager-div {zoom: 1;}
+body ul.roknewspager li {text-indent:0;width:100%;}
+body .roknewspager-wrapper {display: inline;zoom: 1; position: relative;}
+body .roknewspager-comments div.roknewspager-div {zoom: 1;}
+body .roknewspager-comments ul.roknewspager li {display: inline;}
+body #rt-showcase .roknewspager-wrapper {display: inline;zoom: 1; position: relative;}
+
+/* RokStories */
+.rokstories-tip {padding: 0px 10px 25px !important;}
+body .rokstories-layout2 .feature-arrow-r {top: 82%;}
+body .rokstories-layout2 .feature-arrow-l {top: 82%;left: 95%;}
+.rokstories-layout2 .feature-block .readon1-r{width:200px;zoom:1;display:inline-block;position:relative;}
+.rokstories-layout2 .feature-block .readon1-m, .rokstories-layout2 .feature-block .readon-wrap1{zoom:1;display:inline-block;position:relative;}
+
+/* RokTwittie */
+.roktwittie {width:100%;}
+.roktwittie li, .roktwittie .roktwittie-text, .roktwittie-text {zoom:1;}
+.roktwittie li, .roktwittie-text .roktwittie-date {display:inline;}
+
+/* RokAjaxSearch */
+#roksearch_results .roksearch_even {zoom:1;}
+#roksearch_results .container-wrapper {position:relative;zoom:1;width:400px;}
+#roksearch_results .container-scroller {position:relative;zoom:1;}
+#roksearch_results .container-scroller .page .roksearch_odd, #roksearch_results .container-scroller .page .roksearch_even {zoom:1;z-index:1000;}
+#roksearch_results .container-scroller span.small { bottom:6px;right:10px}
+
+/* Joomla */
+.rt-joomla ol {margin-left: 10px;}
+.rt-joomla .rt-article-title, h2.title{letter-spacing:1px;}
+.readon, .readon-main{display:inline;zoom:1;}
+#rt-main-surround .rt-joomla #remember{border:none;width:25px;}

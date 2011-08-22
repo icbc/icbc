@@ -1,0 +1,44 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* Global */
+.menutop li {height: auto;margin: 0;padding: 0;position: relative;list-style: none;}
+.menutop em {font-size:80%;font-weight:normal;display:block;font-style:normal;}
+.menutop li .item .menutop li.active .item {display: block;margin: 0;text-decoration: none;float: none;width: auto;}
+
+/* Root Items */
+.menutop .subtext span {line-height: 18px;}
+.menutop .subtext em {line-height:13px;}
+.menutop {list-style: none;margin: 0;padding: 3px 3px 0 3px;position: relative;line-height: 1.0;}
+.menutop li, .menutop li.active:hover {float: left;margin: 0 0 0 9px;height: 50px;}
+.menutop li .item, .menutop li.active:hover .item {white-space: nowrap;display: block;font-weight: bold;padding: 0;font-size: 15px;z-index: 100;cursor: pointer;position:relative;margin: 0 0 0 -9px;outline: none;text-align: center;line-height: 36px;height: 50px;}
+.menutop li .item span {display: block;margin: 0;outline: none;padding: 6px 20px 0 20px;width: auto;height: 44px;}
+.menutop li .item em {font-size:11px;font-weight:normal;display:block;font-style:normal;text-transform: lowercase;}
+.menutop li:hover {margin: 0 0 0 8px;}
+.menutop li:hover .item {margin: 0 0 0 -8px;}
+.menutop li.parent .item span {padding-right: 23px;}
+
+/* Submenu Items */
+#rt-submenu ul.menu {margin: 0;padding: 0;}
+#rt-submenu ul.menu li {list-style: none;float: left;margin-right: 7px;margin-left: 12px;height: 27px;}
+#rt-submenu ul.menu li .item {display: block;font-size: 14px;line-height: 1.9em;margin-left: -12px;height: 27px;}
+#rt-submenu ul.menu li.active .item {font-weight: bold;}
+#rt-submenu .nopill ul.menu li .item:hover, #rt-submenu ul.menu li.active .item {}
+#rt-submenu ul.menu li .item span {display: block;padding: 0 9px;}
+#rt-submenu ul.menu li.parent .item span {padding-right: 22px;}
+
+/* Pills */
+.fusion-pill-l {height: 50px;margin:0;top:0;position:absolute;left:0;}
+.fusion-pill-r {height: 50px;}
+#rt-submenu .fusion-pill-l {height: 25px;top:6px;position:absolute;left:0;z-index:1;}
+#rt-submenu .fusion-pill-r {height: 25px;}
+
+/* RTL */
+body.rtl .menutop li, body.rtl .menutop li.active:hover {float: right;}
+body.rtl #rt-submenu ul.menu li {float: right;margin-right: 0;margin-left: 7px;}
+.bodylevel-low.menu-type-splitmenu.rtl .menutop li.active {background: none !important;}
+.bodylevel-low.rtl .menutop li.active > .item span {height: 39px;}

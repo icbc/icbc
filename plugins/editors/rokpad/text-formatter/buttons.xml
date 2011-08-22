@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- RokPad Editor Plugin -->
+<!-- -->
+<!-- @package RocketTheme -->
+<!-- @subpackage rokpad -->
+<!-- @version   1.2 April 9, 2010 -->
+<!-- @author    RocketTheme http://www.rockettheme.com -->
+<!-- @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC -->
+<!-- @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only -->
+
+
+<!-- BUTTONS ATTRIBUTES: -->
+<!-- 	name: lowercase name of the button, no spaces nor special chars allowed -->
+<!-- 	label: [optional] tooltip label, spaces allowed. If not specified, name attribute will be used. -->
+<!-- 	icon: [optional] name of the button icon to show (looks into path: plugins/editors/rokpad/text-formatter/icons/). -->
+<!-- 		  If not specified, <name>.png will be looked for. -->
+<!-- 	position: [optional] left | right. In which side of the toolbar you want the button to appear. -->
+<!-- 		      If not specified, defaults to left. -->
+
+<!-- 	CHILDREN (all values must be into <![CDATA[]]>, double quotes must be escaped [see open tag]): -->
+<!-- 		open: the opening tag prepended to the text. Ie, <div class=\"example\"> -->
+<!-- 		close: the closing tag postponed to the text. Ie, </div> -->
+<!-- 		shortcut: [optional] the shortcut you want to attach to your button. -->
+<!-- 				  naming are: cmd, shift, alt, ctrl -->
+<!-- 				  Windows Users: cmd defaults to ctrl -->
+<!-- 				  last char must be of length 1 -->
+
+<!-- SEPARATOR: -->
+<!-- 	Separator syntax is just "<separator />". The separator will be put on the position of the precedent button. -->
+<!--	Ie, the precedent button has position="right", separator will be on right position. -->
+
+<rokpad>
+	<button name="h1" label="H1" icon="h1.png" position="left">
+		<open><![CDATA[<h1 class=\"header\">]]></open>
+		<close><![CDATA[</h1>]]></close>
+		<shortcut>cmd + shift + 1</shortcut>
+	</button>
+	<button name="h2" label="H2" icon="h2.png" position="left">
+		<open><![CDATA[<h2>]]></open>
+		<close><![CDATA[</h2>]]></close>
+		<shortcut>cmd + shift + 2</shortcut>
+	</button>
+	<button name="h3" label="H3" icon="h3.png" position="left">
+		<open><![CDATA[<h3>]]></open>
+		<close><![CDATA[</h3>]]></close>
+		<shortcut>cmd + shift + 3</shortcut>
+	</button>
+	<button name="p" label="Paragraph" icon="p.png" position="left">
+		<open><![CDATA[<p>]]></open>
+		<close><![CDATA[</p>]]></close>
+		<shortcut>cmd + shift + p</shortcut>
+	</button>
+	<separator />
+	<button name="bold" label="Bold" icon="bold.png" position="left">
+		<open><![CDATA[<strong>]]></open>
+		<close><![CDATA[</strong>]]></close>
+		<shortcut>cmd + b</shortcut>
+	</button>
+	<button name="italic" label="Italic" icon="italic.png" position="left">
+		<open><![CDATA[<em>]]></open>
+		<close><![CDATA[</em>]]></close>
+		<shortcut>cmd + i</shortcut>
+	</button>
+	<button name="underline" label="Underline" icon="underline.png" position="left">
+		<open><![CDATA[<u>]]></open>
+		<close><![CDATA[</u>]]></close>
+		<shortcut>cmd + shift + u</shortcut>
+	</button>
+	<separator />
+	<button name="link" label="Link" icon="link.png" position="left">
+		<open><![CDATA[<a href=\"\">]]></open>
+		<close><![CDATA[</a>]]></close>
+		<shortcut>cmd + shift + a</shortcut>
+	</button>
+	<button name="image" label="Image" icon="image.png" position="left">
+		<open><![CDATA[<img src=\"\" alt=\"\" />]]></open>
+		<shortcut>cmd + shift + i</shortcut>
+	</button>
+</rokpad>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.5.10" method="update">
+	<name>System - RokCandy</name>
+	<creationDate>April 27, 2010</creationDate>
+	<author>RocketTheme, LLC</author>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<copyright>(C) 2005 - 2010 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.2</version>
+	<description>This is the RokCandy system plugin that performs the macro replacement</description>
+	<files>
+		<filename plugin="rokcandy_system">rokcandy_system.php</filename>
+	</files>
+</install>

@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<install version="1.5" type="plugin" group="editors">
+	<name>Editor - RokPad</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>April 9, 2010</creationDate>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<copyright>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</copyright>
+	<license>LGPL</license>
+	<version>1.2</version>
+	<description>This loads an advanced text editor for developers with highlight, search &amp; replace, lines counter, auto indent, multi-language and much more</description>
+	<files>
+		<filename plugin="rokpad">rokpad.php</filename>
+		<folder>rokpad/</folder>
+	</files>
+	<languages>
+   		<language tag="en-GB">en-GB.plg_editors_rokpad.ini</language>
+	</languages>
+	<params>
+		<param name="@spacer" type="spacer" default="&lt;div id=&quot;parser-type&quot;   style=&quot;font-weight:normal;font-size:12px;color:#fff;padding:4px;margin:0;background:#666;&quot;&gt;Parser Type&lt;/div&gt;" label="" description="" />
+		
+		<param name="rokpad-parser" type="list" default="xhtmlmixed" label="Parser" description="Select parser">
+			<option value="xhtml">XHTML</option>
+			<option value="css">CSS</option>
+			<option value="javascript">JavaScript</option>
+			<option value="php">PHP</option>
+			<option value="xhtmlmixed">XHTML + CSS + JavaScript</option>
+			<option value="phpxhtmlmixed">XHTML + CSS + JavaScript + PHP</option>
+		</param>
+		
+		<param name="rokpad-tidylevel" type="list" default="XHTML 1.0 Transitional" label="DocType Spec" description="HTML/XHTML document type specification level for the html tidy and tag transformaiton">
+			<option value="HTML 4.01 Transitional">HTML 4.01 Transitional</option>
+			<option value="HTML 4.01 Strict">HTML 4.01 Strict</option>
+			<option value="XHTML 1.0 Transitional">XHTML 1.0 Transitional</option>
+			<option value="XHTML 1.0 Strict">XHTML 1.0 Strict</option>
+			<option value="XHTML 1.1">XHTML 1.1</option>
+		</param>
+		
+		<param name="rokpad-show-formatter" type="radio" default="1" label="Text Formatting Bar" description="Show/Hide the Text Formatting Bar which contains predefined and custom text formatting shortcuts">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		
+		<param name="@spacer" type="spacer" default="&lt;div id=&quot;editor-parameters&quot;   style=&quot;font-weight:normal;font-size:12px;color:#fff;padding:4px;margin:0;background:#666;&quot;&gt;Editor Parameters&lt;/div&gt;" label="" description="" />
+		
+		<param name="rokpad-height" type="text" default="350" label="Initial Editor Height (px.)" description="The initial height of the editor frame, given as pixels." />
+		<param name="rokpad-passdelay" type="text" default="200" label="Coloring Pass Delay (ms.)" description="Gives the amount of milliseconds between coloring passes." />
+		<param name="rokpad-passtime" type="text" default="50" label="Pass Time (ms.)" description="Specifies the maximum amount of time that the highlighter will spend in one shot. Setting this too high will cause the editor to 'freeze' the browser for noticeable intervals." />
+		<param name="rokpad-linenumberdelay" type="text" default="200" label="Line Number Delay (ms.)" description="When both line numbers are and text wrapping are turned on, updating line numbers can be expensive. These settings can be used to control how fast the updating happens ― they work in the same way as Coloring Pass Delay and Pass Time." />
+		<param name="rokpad-linenumbertime" type="text" default="50" label="Line Number Time (ms.)" description="When both line numbers are and text wrapping are turned on, updating line numbers can be expensive. These settings can be used to control how fast the updating happens ― they work in the same way as Coloring Pass Delay and Pass Time." />
+		<param name="rokpad-continuous" type="text" default="500" label="Continuous Scan (ms.)" description="Configure continuous scanning of the document. When 0, scanning is disabled. When set to a number, say N, a 'background' process will scan the document for passTime (see above) milliseconds every N milliseconds, regardless of whether anything changed. This makes sure non-local changes propagate through the document, and will help keep everything consistent. It does add extra processing cost, even for an idle editor." />
+		<param name="rokpad-matchparens" type="radio" default="1" label="Auto Match Parens" description="When ON, will cause parens to be matched every time a key is pressed or the user clicks on the document. Might be expensive for big documents">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		<param name="rokpad-history" type="text" default="50" label="History Depth" description="Maximum length of the undo history." />
+		<param name="rokpad-history-delay" type="text" default="800" label="History Delay (ms.)" description="When nothing is done in the editor for this amount of milliseconds, pending changes get added to the undo history. Setting this lower will give the undo functionality a finer granularity." />
+		<param name="rokpad-lineHandler" type="radio" default="1" label="Lines Number" description="Show line numbers to the left of the editor.">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		<param name="rokpad-textwrapperHandler" type="radio" default="1" label="Text Wrapper" description="Enables text-wrapping in the editor frame.">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		<param name="rokpad-indentunit" type="text" default="2" label="Indent Unit (int.)" description="An integer that specifies the amount of spaces one 'level' of indentation should add." />
+		<param name="rokpad-tabmode" type="list" default="indent" label="Tab Mode" description="Determines what the effect of pressing tab is.">
+			<option value="indent">Auto Indent</option>
+			<option value="shift">Shift</option>
+			<option value="spaces">Spaces</option>
+			<option value="default">None</option>
+		</param>
+		<param name="rokpad-loadindent" type="radio" default="1" label="Reindent On Load" description="When enabled, this causes the content of the editor to be reindented immediately when the editor loads.">
+			<option value="1">Enabled</option>
+			<option value="0">Disabled</option>
+		</param>
+		
+	</params>
+</install>

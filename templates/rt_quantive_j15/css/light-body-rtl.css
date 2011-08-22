@@ -1,0 +1,42 @@
+/**
+ * @package   Quantive Template - RocketTheme
+ * @version   1.5.3 June 14, 2010
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+/* Top Menu */
+body.rtl .menutop li.active.root,
+body.rtl .menutop li.root:hover,
+body.rtl .menutop li.root.f-mainparent-itemfocus,
+body.rtl .menu-type-splitmenu .menutop li.active,
+body.rtl .menu-type-splitmenu .menutop li:hover,
+body.rtl .menu-type-splitmenu .menutop li.f-mainparent-itemfocus,
+body.rtl .menutop li.active.root .item,
+body.rtl .menutop li.root:hover .item,
+body.rtl .menutop li.root.f-mainparent-itemfocus .item,
+body.rtl .menu-type-splitmenu .menutop li.active .item,
+body.rtl .menu-type-splitmenu .menutop li:hover .item,
+body.rtl .menu-type-splitmenu .menutop li.f-mainparent-itemfocus .item {background: #e3e3e5;}
+body.rtl .menutop li.item1.root.active .item,
+body.rtl .menutop li.item1.root:hover .item,
+body.rtl .menutop li.item1.root.f-mainparent-itemfocus .item,
+body.menu-type-splitmenu.rtl .menutop li.item1.active .item,
+body.menu-type-splitmenu.rtl .menutop li.item1:hover .item {background: url(../images/body/light/rtl/readon-r.png) 100% -180px no-repeat;}
+body.rtl .menutop li.parent.root > .item span, body.menu-type-splitmenu.rtl .menutop li.parent .item span {background: url(../images/body/light/menus/menutop-daddy.png) 8px 50% no-repeat;}
+body.rtl .menutop li.root.f-mainparent-itemfocus > .item span, body.rtl .menutop li.parent.root.active > .item span, body.rtl .menutop li.parent.root:hover > .item span, body.menu-type-splitmenu.rtl .menutop li.parent.active .item span, body.menu-type-splitmenu.rtl .menutop li.parent:hover .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 8px 50% no-repeat;}
+
+/* Splitmenu Sub Menu */
+body.rtl #rt-submenu ul.menu li.parent .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 8px 50% no-repeat;}
+
+/* FusionMenu Dropdown */
+body.rtl .menutop ul li > .daddy span {background: url(../images/body/light/menus/rtl/dropdown-daddy.png) 8px 50% no-repeat;}
+
+/* Side Menu */
+body.rtl .square3 .roknewspager-next, body.rtl .square3 .roknewspager-next-disabled, body.rtl #rt-main-surround .square3 ul.menu li a, body.rtl #rt-main-surround .square3 ul.menu li .separator, body.rtl #rt-main-surround .square3 ul.menu li .item {background: url(../images/body/light/menus/rtl/menu-arrows2.png) 100% 8px no-repeat;}
+body.rtl .square3 .roknewspager-prev, body.rtl .square3 .roknewspager-prev-disabled {background: url(../images/body/light/menus/menu-arrows2.png) 3px 8px no-repeat;}
+
+/* Typography */
+body.rtl .readon, body.rtl .readon-main {background: url(../images/body/light/rtl/readon-r.png) 0 0 no-repeat;}
+body.rtl .readon span, body.rtl .readon .button {background: url(../images/body/light/rtl/readon-l.png) 100% 0 no-repeat;}
