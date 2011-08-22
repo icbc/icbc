@@ -12,10 +12,10 @@ var $debug = '0';
 var $debug_lang = '0';
 /* Database Settings */
 var $dbtype = 'mysql';
-var $host = 'localhost';
-var $user = 'root';
-var $password = '123';
-var $db = 'ibcb';
+var $host = 'mysql07.4click.tv.br';
+var $user = 'w4click6';
+var $password = 'IcbcDb1102';
+var $db = 'w4click6';
 var $dbprefix = 'jos_';
 /* Server Settings */
 var $live_site = '';
