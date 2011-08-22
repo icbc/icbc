@@ -13,6 +13,7 @@ var $debug_lang = '0';
 /* Database Settings */
 var $dbtype = 'mysql';
 var $host = 'mysql07.4click.tv.br';
+
 var $user = 'w4click6';
 var $password = 'IcbcDb1102';
 var $db = 'w4click6';
