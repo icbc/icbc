@@ -1,0 +1,31 @@
+/* 
+	Document   : estilo
+	Created on : 31/08/2011, 15:58:09
+	Author     : Lucas Emmanoel
+	Description:
+		Documento para formatação e configuração da estrutura visual do componente
+*/
+#com_simule div.chave{
+	float: left;
+	text-align: right;
+	width: 15%;
+	padding-right: 10px;
+}
+#com_simule div.campo{
+	float: left;
+	width: 80%;
+}
+#com_simule br{
+	clear: both;
+	margin-bottom: 10px;
+}
+#com_simule .maior{
+	width: 100%;
+}
+#com_simule .medio{
+	width: 50%;
+}
+#com_simule .menor{
+	width: 25%;
+}
+
