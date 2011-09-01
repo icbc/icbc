@@ -28,4 +28,8 @@
 #com_simule .menor{
 	width: 25%;
 }
+#com_simule .botoes{
+	width: 100%;
+	text-align: center
+}
 
