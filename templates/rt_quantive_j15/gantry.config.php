@@ -80,7 +80,7 @@ $gantry_presets = array (
 			'bodylevel' => 'high',
 			'bodystyle' => 'light',
             'cssstyle' => 'style6',
-            'linkcolor' => '#009D93',
+            'linkcolor' => '#f0b310',
 			'logostyle' => 'dark',
             'font-family' => 'helvetica'
         ),

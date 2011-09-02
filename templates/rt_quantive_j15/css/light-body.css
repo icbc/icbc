@@ -10,7 +10,7 @@
 
 /* Core Text */
 body, .title, .rt-article-title, .rt-article-title a, #rt-bottom, #rt-footer, #rt-footer .title, #rt-header, #rt-copyright {color: #666;}
-.title span, .rt-article-title span, .roktabs-title span, h1 {color: #333;}
+.title span, .rt-article-title span, .roktabs-title span, h1 {color: #4a63ae;}
  
 /* Showcase Text */
 #rt-showcase h2.title span, #rt-showcase .feature-title, #rt-showcase .feature-desc {color: #222;text-shadow: 1px 1px 1px #fff;}
@@ -123,7 +123,7 @@ body.backgroundlevel-low.backgroundstyle-style8 {background: #fff;}
 .menutop li.root.f-mainparent-itemfocus .item,
 .menu-type-splitmenu .menutop li.active .item,
 .menu-type-splitmenu .menutop li:hover .item,
-.menu-type-splitmenu .menutop li.f-mainparent-itemfocus .item {background: #e3e3e5;}
+.menu-type-splitmenu .menutop li.f-mainparent-itemfocus .item {background: #f0b310;}
 .menutop li.item1.root.active .item,
 .menutop li.item1.root:hover .item,
 .menutop li.item1.root.f-mainparent-itemfocus .item,
@@ -133,7 +133,7 @@ body.backgroundlevel-low.backgroundstyle-style8 {background: #fff;}
 .menutop li.root.f-mainparent-itemfocus > .item span, .menutop li.parent.root.active > .item span, .menutop li.parent.root:hover > .item span, .menu-type-splitmenu .menutop li.parent.active .item span, .menu-type-splitmenu .menutop li.parent:hover .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 100% 50% no-repeat;}
 
 /* Splitmenu Sub Menu */
-#rt-submenu {background: #e3e3e5;border-bottom: 1px solid #ccc;}
+#rt-submenu {background: #f0b310;border-bottom: 1px solid #ccc;}
 #rt-submenu .nopill ul.menu li:hover, #rt-submenu ul.menu li.active {background: url(../images/body/light/menus/submenu-r.png) 100% 0 no-repeat;}
 #rt-submenu .nopill ul.menu li:hover .item, #rt-submenu ul.menu li.active .item {background: url(../images/body/light/menus/submenu-l.png) 0 0 no-repeat;}
 #rt-submenu ul.menu li.parent .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 100% 50% no-repeat;}
