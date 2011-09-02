@@ -16,6 +16,7 @@ $action = JRoute::_("index.php?option=com_simule");
 		</div>
 		<div class="campo" id="tipoPessoa">
 			<?php echo $this->pessoa ?>
+			
 		</div>
 		<br />
 		<div class="chave">
