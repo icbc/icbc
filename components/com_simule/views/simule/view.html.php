@@ -4,6 +4,7 @@ class SimuleFrontViewSimule extends JView{
 	function display($tpl = null) {
 		$documento =& JFactory::getDocument();
 		$documento->addStyleSheet("components/com_simule/auxiliares/css/estilo.css");
+		$documento->addScript("components/com_simule/auxiliares/js/ajax.js");
 		$registro->imposto = null;
 		$registro->doacao = null;
 		$registro->pessoa = "pj";
