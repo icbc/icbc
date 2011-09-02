@@ -1,6 +1,2 @@
-#Ignora pasta e diretorios do nbproject
 /nbproject/private/
-#Ignorar pastas do ache
-cache/**/*
-tmp/**/*
-logs/**/*
+/cache/
