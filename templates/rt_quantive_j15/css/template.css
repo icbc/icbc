@@ -34,10 +34,10 @@ ul.menu {padding-left: 0;}
 .bodylevel-low .rt-surround-bottom {display: none;}
 
 /* Header */
-#rt-header {padding: 15px 0 5px 0;}
+#rt-header {padding: 15px 0 5px 0; height: 120px;}
 
 /* Logo */
-#rt-logo {width: 186px;height: 57px;display: block;}
+#rt-logo {width: 220px;height: 93px;display: block;}
 
 /* Top Menu */
 #rt-navigation {margin: 0 6px;position: relative;}
