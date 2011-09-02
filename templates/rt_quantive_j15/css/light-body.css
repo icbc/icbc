@@ -85,8 +85,8 @@ body.backgroundlevel-high.backgroundstyle-style5 #rt-main-background {background
 body.backgroundlevel-med.backgroundstyle-style5 {background: #000 url(../images/backgrounds/style5/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style5 {background: #000;}
 
-body.backgroundlevel-high.backgroundstyle-style6 {background: #fff url(../images/backgrounds/style6/high/bg-top.jpg) 50% 117% no-repeat;}
-body.backgroundlevel-high.backgroundstyle-style6 #rt-main-background {background: url(../images/backgrounds/style6/high/bg-top.jpg) 50% -20px no-repeat;}
+body.backgroundlevel-high.backgroundstyle-style6 {background: url("../images/backgrounds/style6/high/bg_.png") repeat-x scroll 50% bottom #FFFFFF;}
+body.backgroundlevel-high.backgroundstyle-style6 #rt-main-background {background: url("../images/backgrounds/style6/high/bg_2.png") no-repeat scroll 50% 0px transparent;}
 body.backgroundlevel-med.backgroundstyle-style6 {background: #fff url(../images/backgrounds/style6/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style6 {background: #fff;}
 
