@@ -9,8 +9,10 @@
 /*** TEXT COLORS *************************/
 
 /* Core Text */
-body, .title, .rt-article-title, .rt-article-title a, #rt-bottom, #rt-footer, #rt-footer .title, #rt-header, #rt-copyright {color: #666;}
-.title span, .rt-article-title span, .roktabs-title span, h1 {color: #4a63ae;}
+body {color: #666;}
+
+.title, .rt-article-title, .rt-article-title a, #rt-bottom, #rt-footer, #rt-footer .title, #rt-header, #rt-copyright {color: #6f80b1;}
+.title span, .rt-article-title span, .roktabs-title span, h1 {color: #304991;}
  
 /* Showcase Text */
 #rt-showcase h2.title span, #rt-showcase .feature-title, #rt-showcase .feature-desc {color: #222;text-shadow: 1px 1px 1px #fff;}
@@ -124,11 +126,11 @@ body.backgroundlevel-low.backgroundstyle-style8 {background: #fff;}
 .menu-type-splitmenu .menutop li.active .item,
 .menu-type-splitmenu .menutop li:hover .item,
 .menu-type-splitmenu .menutop li.f-mainparent-itemfocus .item {background: #f0b310;}
-.menutop li.item1.root.active .item,
+/*.menutop li.item1.root.active .item,
 .menutop li.item1.root:hover .item,
 .menutop li.item1.root.f-mainparent-itemfocus .item,
 .menu-type-splitmenu .menutop li.item1.active .item,
-.menu-type-splitmenu .menutop li.item1:hover .item {background: url(../images/body/light/readon-r.png) 0 -180px no-repeat;}
+.menu-type-splitmenu .menutop li.item1:hover .item {background: url(../images/body/light/readon-r.png) 0 -180px no-repeat;}*/
 .menutop li.parent.root > .item span, .menu-type-splitmenu .menutop li.parent .item span {background: url(../images/body/light/menus/menutop-daddy.png) 100% 50% no-repeat;}
 .menutop li.root.f-mainparent-itemfocus > .item span, .menutop li.parent.root.active > .item span, .menutop li.parent.root:hover > .item span, .menu-type-splitmenu .menutop li.parent.active .item span, .menu-type-splitmenu .menutop li.parent:hover .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 100% 50% no-repeat;}
 
