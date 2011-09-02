@@ -32,7 +32,7 @@ body {color: #666;}
 .square5 .module-content {color: #666;}
 .square5 .module-content a {color: #444;}
 .square5 .title, .square5 .rt-article-title, .square5 .rt-article-title a {color: #666;text-shadow: 1px 1px 1px #eee;}
-.square5 .title span, .square5 .rt-article-title span {color: #444;}
+.square5 .title span, .square5 .rt-article-title span {color: #304991;}
  
 /* Menu Text */
 .menutop li.root.active > .item, .menutop li.root.active > .item:hover, .menu-type-splitmenu .menutop li.active .item, .menu-type-splitmenu .menutop li.active:hover .item, .menutop li.root.active.f-mainparent-itemfocus > .item {color: #444;text-shadow: 1px 1px 1px #fff;}
