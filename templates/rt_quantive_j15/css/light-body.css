@@ -32,7 +32,7 @@ body {color: #666;}
 .square5 .module-content {color: #666;}
 .square5 .module-content a {color: #444;}
 .square5 .title, .square5 .rt-article-title, .square5 .rt-article-title a {color: #666;text-shadow: 1px 1px 1px #eee;}
-.square5 .title span, .square5 .rt-article-title span {color: #444;}
+.square5 .title span, .square5 .rt-article-title span {color: #304991;}
  
 /* Menu Text */
 .menutop li.root.active > .item, .menutop li.root.active > .item:hover, .menu-type-splitmenu .menutop li.active .item, .menu-type-splitmenu .menutop li.active:hover .item, .menutop li.root.active.f-mainparent-itemfocus > .item {color: #444;text-shadow: 1px 1px 1px #fff;}
@@ -85,8 +85,8 @@ body.backgroundlevel-high.backgroundstyle-style5 #rt-main-background {background
 body.backgroundlevel-med.backgroundstyle-style5 {background: #000 url(../images/backgrounds/style5/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style5 {background: #000;}
 
-body.backgroundlevel-high.backgroundstyle-style6 {background: #fff url(../images/backgrounds/style6/high/bg-top.jpg) 50% 117% no-repeat;}
-body.backgroundlevel-high.backgroundstyle-style6 #rt-main-background {background: url(../images/backgrounds/style6/high/bg-top.jpg) 50% -20px no-repeat;}
+body.backgroundlevel-high.backgroundstyle-style6 {background: url("../images/backgrounds/style6/high/bg_.png") repeat-x scroll 50% bottom #FFFFFF;}
+body.backgroundlevel-high.backgroundstyle-style6 #rt-main-background {background: url("../images/backgrounds/style6/high/bg_2.png") no-repeat scroll 50% 0px transparent;}
 body.backgroundlevel-med.backgroundstyle-style6 {background: #fff url(../images/backgrounds/style6/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style6 {background: #fff;}
 
@@ -126,11 +126,11 @@ body.backgroundlevel-low.backgroundstyle-style8 {background: #fff;}
 .menu-type-splitmenu .menutop li.active .item,
 .menu-type-splitmenu .menutop li:hover .item,
 .menu-type-splitmenu .menutop li.f-mainparent-itemfocus .item {background: #f0b310;}
-/*.menutop li.item1.root.active .item,
+.menutop li.item1.root.active .item,
 .menutop li.item1.root:hover .item,
 .menutop li.item1.root.f-mainparent-itemfocus .item,
 .menu-type-splitmenu .menutop li.item1.active .item,
-.menu-type-splitmenu .menutop li.item1:hover .item {background: url(../images/body/light/readon-r.png) 0 -180px no-repeat;}*/
+.menu-type-splitmenu .menutop li.item1:hover .item {background: url(../images/body/light/readon-r.png) 0 -180px no-repeat;}
 .menutop li.parent.root > .item span, .menu-type-splitmenu .menutop li.parent .item span {background: url(../images/body/light/menus/menutop-daddy.png) 100% 50% no-repeat;}
 .menutop li.root.f-mainparent-itemfocus > .item span, .menutop li.parent.root.active > .item span, .menutop li.parent.root:hover > .item span, .menu-type-splitmenu .menutop li.parent.active .item span, .menu-type-splitmenu .menutop li.parent:hover .item span {background: url(../images/body/light/menus/menutop-active-daddy.png) 100% 50% no-repeat;}
 
