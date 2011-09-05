@@ -68,7 +68,7 @@ function modChrome_sidemenu($module, &$params, &$attribs)
 	        <?php endif; ?>
 	            <div class="rt-block">
 					<div class="module-content">
-						<div class="module-title"><h2 class="title"><?php echo $menu_title_item->name.' '.JText::_('Menu'); ?></h2></div>
+						<div class="module-title"><h2 class="title"><?php echo JText::_('Projetos').' '.$menu_title_item->name; ?></h2></div>
 						<div class="clear"></div>
 						<div class="module-inner">
 	                		<?php echo $module->content; ?>

@@ -1,9 +1,8 @@
 <?php
 defined("_JEXEC") or die("Acesso Restrito");
-$action = JRoute::_("index.php?option=com_simule");
 ?>
 <div id="com_simule">
-	<form action="<?php echo $action ?>" name="form" id="form-simule" >
+	<form action="index.php?option=com_simule" method="post" name="form" id="form-simule" >
 		<div class="chave">
 			<label for="imposto">Imposto:</label>
 		</div>
@@ -82,7 +81,7 @@ $action = JRoute::_("index.php?option=com_simule");
 		</div>
 		<br />
 		<div class="botoes">
-			<button name="task" valeu="simula">Simule</button>
+			<button type="button" name="task" valeu="simule" id="simule">Simule</button>
 		</div>
 	</form>
 </div>
