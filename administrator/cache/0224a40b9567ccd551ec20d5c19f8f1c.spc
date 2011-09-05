@@ -1,0 +1,31 @@
+a:4:{s:5:"child";a:1:{s:0:"";a:1:{s:3:"rss";a:1:{i:0;a:6:{s:4:"data";s:3:"
+	
+";s:7:"attribs";a:1:{s:0:"";a:1:{s:7:"version";s:3:"2.0";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:1:{s:7:"channel";a:1:{i:0;a:6:{s:4:"data";s:26:"
+		
+		
+		
+		
+		
+		
+		
+		
+	";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:7:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:8:"JEV News";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:117:"The premier events calendar for Joomla!  Offering powerful repeat patterns, exception handling and choice of layouts.";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:33:"http://www.jevents.net/en/jevnews";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:13:"lastBuildDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Mon, 05 Sep 2011 17:20:22 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:9:"generator";a:1:{i:0;a:5:{s:4:"data";s:44:"Joomla! 1.5 - Open Source Content Management";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"language";a:1:{i:0;a:5:{s:4:"data";s:5:"en-gb";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"item";a:2:{i:0;a:6:{s:4:"data";s:31:"
+			
+			
+			
+			
+			
+			
+			
+		";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:7:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:23:"JEvents 1.5.5g Released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:59:"http://www.jevents.net/en/jevnews/138-jevents-155f-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:59:"http://www.jevents.net/en/jevnews/138-jevents-155f-released";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:300:"<p>JEvents 1.5.5g is now released and available to download from <a href="http://www.jevents.net/en/jevents-download">http://www.jevents.net/en/jevents-download</a></p>
+<p>Only the component is updated from version 1.5.5f and fixes an issue with deleting single repeats in the backend of Joomla.</p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"jevents@gwesystems.com (Administrator)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"category";a:1:{i:0;a:5:{s:4:"data";s:19:"JEvents CPanel News";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Fri, 13 May 2011 09:07:59 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:1;a:6:{s:4:"data";s:31:"
+			
+			
+			
+			
+			
+			
+			
+		";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:0:"";a:7:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:53:"JEvents 2.0 (Release Candidate) available for testing";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:48:"http://www.jevents.net/en/jevnews/139-jevents-20";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"guid";a:1:{i:0;a:5:{s:4:"data";s:48:"http://www.jevents.net/en/jevnews/139-jevents-20";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:11:"description";a:1:{i:0;a:5:{s:4:"data";s:674:"<p>The release candidate of JEvents 2.0 is now available from the <a href="http://www.jevents.net/en/downloads/section/4-prereleases">download area</a> - this version is designed to be compatible with Joomla 1.5,&nbsp; 1.6 and 1.7.</p>
+<p>As well as being compatible with Joomla 1.6/1.7, JEvents 2.0 allows you to configure categories to block overlapping events from being created.&nbsp; This can also be applied to event venues using the managed locations club addon.</p>
+<p>Most of the club addons have now been migrated to be compatible with Joomla 1.6 (see this <a href="http://www.jevents.net/forum/viewtopic.php?f=23&amp;t=9102">forum post</a> for more detail).</p>";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:5:{s:4:"data";s:38:"jevents@gwesystems.com (Administrator)";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:8:"category";a:1:{i:0;a:5:{s:4:"data";s:19:"JEvents CPanel News";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"pubDate";a:1:{i:0;a:5:{s:4:"data";s:31:"Tue, 16 Feb 2010 19:15:30 +0000";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}}}}}}}}}s:4:"type";i:128;s:7:"headers";a:13:{s:4:"date";s:29:"Mon, 05 Sep 2011 17:20:18 GMT";s:6:"server";s:79:"Apache/2.2.17 (Unix) mod_ssl/2.2.17 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4";s:12:"x-powered-by";s:10:"PHP/5.2.17";s:3:"p3p";s:48:"CP=NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM";s:16:"content-encoding";s:6:"x-gzip";s:20:"x-content-encoded-by";s:11:"Joomla! 1.5";s:7:"expires";s:28:"Mon, 1 Jan 2001 00:00:00 GMT";s:13:"cache-control";s:25:"post-check=0, pre-check=0";s:6:"pragma";s:8:"no-cache";s:10:"set-cookie";s:270:"5d829af9582ab98545dfb27b08841f20=3055c03f10713a4a55613d700764bfca; path=/, lang=deleted; expires=Sun, 05-Sep-2010 17:20:18 GMT; path=/, jfcookie=deleted; expires=Sun, 05-Sep-2010 17:20:18 GMT; path=/, jfcookie[lang]=deleted; expires=Sun, 05-Sep-2010 17:20:18 GMT; path=/";s:13:"last-modified";s:29:"Mon, 05 Sep 2011 17:20:22 GMT";s:10:"connection";s:5:"close";s:12:"content-type";s:34:"application/rss+xml; charset=utf-8";}s:5:"build";s:14:"20090627192103";}

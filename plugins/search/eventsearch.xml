@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="search" method="upgrade">
+    <name>Search - JEvents</name>
+	<creationDate>May 2011</creationDate>
+	<author>JEvents Project Group</author>
+	<copyright>(C) 2008-2011 GWE Systems Ltd, 2006-2008 JEvents Project Group</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.jevents.net</authorUrl>
+	<version>2.0 RC2</version>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <description>Events Search is a plugin to allow searching events of the Events component.</description>
+    <files>
+        <filename plugin="eventsearch">eventsearch.php</filename>
+    </files>
+	<params addpath="/administrator/components/com_jevents/elements/">
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return"/>
+		<param name="date_format" type="text" size="50" default="%Y-%m-%d" label="Date Format" description="Format for date in return"/>
+		<param name="target_itemid" type="jevmenu" default="" label="Target Menu Item" description="Menu item for target page" />
+	</params>
+	
+	<config>
+		<fields name="params">
+		
+			<fieldset name="basic" addfieldpath="/administrator/components/com_jevents/fields">
+				<field
+					name="search_limit"
+					type="text"
+					default="50"
+					label="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+					size="50"
+					description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC" />
+				<field
+					name="date_format"
+					type="text"
+					default="%Y-%m-%d"
+					label="Date Format"
+					description="Format for date in return" />					
+				<field
+					name="target_itemid"
+					type="jevmenu"
+					default=""
+					label="Target Menu Item"
+					description="Menu item for target page" />
+			</fieldset>		
+		</fields>
+	</config>	
+</install>

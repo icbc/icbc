@@ -1,0 +1,21 @@
+div.mod_flickr ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none!important;
+}
+div.mod_flickr li {
+	float: left;
+	margin: 10px 8px!important;
+	list-style-image:none!important;
+}
+div.mod_flickr li a {
+	text-decoration:none;
+}
+div#flickrdev {
+	clear:both;
+	text-align:center;
+}
+div#flickrdev a {
+	text-decoration:none;
+	background:none;
+}

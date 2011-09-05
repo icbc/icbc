@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: metadata.xml 1255 2010-10-06 13:05:26Z royceharding $ --> 
+<metadata>
+	<view title="JEV_CRAWLER">
+		<message><![CDATA[JEV_CRAWLER_VIEW]]></message>
+		<options var="layout" >
+			<option value='listevents' name="JEV_CRAWLER_VIEW" msg="COM_JEVENTS_CRAWLER_DEFAULT_DESC" />
+		</options>		
+		<options var="task" >
+			<option value='crawler.listevents' name="JEV_CRAWLER_VIEW" msg="COM_JEVENTS_CRAWLER_DEFAULT_DESC" />
+		</options>
+	</view>
+	<state>
+		<name>JEvents</name>
+		<description>JEV_CRAWLER_VIEW</description>
+		<params  addpath="/administrator/components/com_jevents/elements/">			
+			<param name="@spacer" type="jevinfo" default="JEV_CRAWLER_RESTRICT"   label="" description="" />	
+			<param name='relstart' type='text' default="-1w" label="JEV_CRAWLER_START" description="JEV_RELSTART_DESC" />
+			<param name='relend' type='text' default="+1m" label="JEV_CRAWLER_END" description="JEV_RELEND_DESC" />		
+			<param name="com_showrepeats" type="jevboolean" default="1" menu="hide" label="JEV_VIEW_REPEAT_YEAR_LIST" description="" />			
+		</params>
+	</state>
+</metadata>

@@ -94,8 +94,8 @@ body.backgroundlevel-high.backgroundstyle-style7 #rt-main-background {background
 body.backgroundlevel-med.backgroundstyle-style7 {background: #fff url(../images/backgrounds/style7/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style7 {background: #fff;}
 
-body.backgroundlevel-high.backgroundstyle-style8 {background: #fff url(../images/backgrounds/style8/high/bg-top.jpg) 50% 117% no-repeat;}
-body.backgroundlevel-high.backgroundstyle-style8 #rt-main-background {background: url(../images/backgrounds/style8/high/bg-top.jpg) 50% -20px no-repeat;}
+body.backgroundlevel-high.backgroundstyle-style8 {background: #fff url("../images/backgrounds/style8/high/background_base.png") 50% bottom repeat-x;}
+body.backgroundlevel-high.backgroundstyle-style8 #rt-main-background {background: url("../images/backgrounds/style8/high/background_topo.png") 50% 38px no-repeat transparent;}
 body.backgroundlevel-med.backgroundstyle-style8 {background: #fff url(../images/backgrounds/style8/med/bg-tile.jpg) 50% 0 repeat-x;}
 body.backgroundlevel-low.backgroundstyle-style8 {background: #fff;}
 

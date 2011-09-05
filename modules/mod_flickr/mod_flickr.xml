@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Flickr</name>
+	<author><![CDATA[<a href="http://www.bulletprooftemplates.com/">Bulletproof Templates</a>]]></author>
+	<creationDate>June 2009</creationDate>
+	<copyright>Copyright (C) 2007 - 2009 Waseem Sadiq. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@bulletprooftemplates.com</authorEmail>
+	<authorUrl>http://www.bulletprooftemplates.com</authorUrl>
+	<version>1.5.1</version>
+	<description>This module shows Flickr galleries with mootools slimbox</description>
+
+	<files>
+		<filename module="mod_flickr">mod_flickr.php</filename>
+		<filename module="mod_flickr">index.html</filename>
+		<folder module="mod_flickr">resources</folder>
+		<folder module="mod_flickr">tmpl</folder>
+	</files>
+
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="flickrkey" type="text" default="4bd52e33fa8fdf3d7d4568fd49991a28" label="Flickr key" description="Write your Flickr key here" />
+		<param name="set_id" type="text" default="72157610176757136" label="Set ID" description="Image set ID" />
+		<param name="limit" type="text" default="" label="Set limit" description="Limit the number of images to show" />		
+		<param name="logo" type="list" default="1" label="Display Logo" description="Select whether or not to show the modflickr logo">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="flickrstyle" type="list" default="1" label="Use Flickr Module Stylesheet" description="Select whether or not to use the flickr module's stylesheet">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="slimbox" type="list" default="1" label="Use Slimbox" description="Select whether or not to use the slimbox overlay">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>
