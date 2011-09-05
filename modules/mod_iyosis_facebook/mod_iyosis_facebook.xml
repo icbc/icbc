@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>Iyosis Facebook Module</name>
+	<creationDate>2 February 2011</creationDate>
+	<author>Remzi Degirmencioglu</author>
+	<copyright>Iyosis.com</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>remzi@degirmencioglu.eu</authorEmail>
+	<authorUrl>http://www.iyosis.com</authorUrl>
+	<version>1.2</version>
+	<releaseDate>17 March 2011</releaseDate>
+	<releaseType>Major update</releaseType>
+	<downloadUrl>http://www.iyosis.com/</downloadUrl>
+	<description>DESCRIPTION</description>
+	<files>
+		<filename module="mod_iyosis_facebook">mod_iyosis_facebook.php</filename>
+		<filename>mod_iyosis_facebook.xml</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>en-GB.mod_iyosis_facebook.ini</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_iyosis_facebook.ini</language>
+	</languages>
+	<params>
+		<param name="plugin" type="radio" default="LikeBox" label="Plugin" description="">
+			<option value="LikeButton">Like Button</option>
+			<option value="LikeBox">Like Box</option>
+			<option value="ActivityFeed">Activity Feed</option>
+			<option value="Recommendations">Recommendations</option>
+		</param>
+		<param type="spacer" default=" " label="" description="" />
+		<param type="spacer" default="&lt;b&gt;Like Button&lt;/b&gt;" label="" description="" />
+		<param type="spacer" default="LIKEBUTTONDESC" label="" description="" />
+		<param name="URLLikeButton" type="text" default="http://www.facebook.com/joomla" label="Facebook Page URL" description="The URL of the Facebook Page for this Like box." size="40" />
+		<param name="codeTypeLikeButton" type="radio" default="iframe" label="Code Type" description="The XFBML version is more versatile and re-sizes its height dynamically, but requires use of the JavaScript SDK.">
+			<option value="iframe">iframe</option>
+			<option value="XFBML">XFBML</option>
+		</param>
+		<param name="widthLikeButton" type="text" default="180" label="Width" description="PLUGINWIDTH" size="10" />
+		<param name="heightLikeButton" type="text" default="30" label="Height" description="PLUGINHEIGHT" size="10" />
+		<param name="colorSchemeLikeButton" type="radio" default="light" label="Color Scheme" description="PLUGINCOLORSCHEME">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</param>
+		<param name="showFacesLikeButton" type="radio" default="1" label="Show Faces" description="Show profile photos in the plugin.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="layoutLikeButton" type="radio" default="standard" label="Layout Style" description="Determines the size and amount of social context next to the button">
+			<option value="standard">standard</option>
+			<option value="button_count">button_count</option>
+			<option value="box_count">box_count</option>
+		</param>
+
+		<param type="spacer" default=" " label="" description="" />
+		<param type="spacer" default="&lt;b&gt;Like Box&lt;/b&gt;" label="" description="" />
+		<param type="spacer" default="LIKEBOXDESC" label="" description="" />
+		<param name="URLLikeBox" type="text" default="http://www.facebook.com/joomla" label="Facebook Page URL" description="The URL of the Facebook Page for this Like box." size="40" />
+		<param name="codeTypeLikeBox" type="radio" default="iframe" label="Code Type" description="The XFBML version is more versatile and re-sizes its height dynamically, but requires use of the JavaScript SDK.">
+			<option value="iframe">iframe</option>
+			<option value="XFBML">XFBML</option>
+		</param>
+		<param name="widthLikeBox" type="text" default="250" label="Width" description="PLUGINWIDTH" size="10" />
+		<param name="heightLikeBox" type="text" default="600" label="Height" description="PLUGINHEIGHT" size="10" />
+		<param name="colorSchemeLikeBox" type="radio" default="light" label="Color Scheme" description="PLUGINCOLORSCHEME">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</param>
+		<param name="showFacesLikeBox" type="radio" default="1" label="Show Faces" description="Show profile photos in the plugin.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="showStreamLikeBox" type="radio" default="1" label="Show Stream" description="Show the profile stream for the public profile.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="showHeaderLikeBox" type="radio" default="1" label="Show Header" description="Show the 'Find us on Facebook' bar at top. Only shown when either stream or faces are present.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+		<param type="spacer" default=" " label="" description="" />
+		<param type="spacer" default="&lt;b&gt;Activity Feed&lt;/b&gt;" label="" description="" />
+		<param type="spacer" default="ACTIVITYFEEDDESC" label="" description="" />
+		<param name="domainActivityFeed" type="text" default="joomla.org" label="Domain" description="The domain to show activity for." size="40" />
+		<param name="codeTypeActivityFeed" type="radio" default="iframe" label="Code Type" description="The XFBML version is more versatile, but requires use of the JavaScript SDK.">
+			<option value="iframe">iframe</option>
+			<option value="XFBML">XFBML</option>
+		</param>
+		<param name="widthActivityFeed" type="text" default="250" label="Width" description="PLUGINWIDTH" size="10" />
+		<param name="heightActivityFeed" type="text" default="600" label="Height" description="PLUGINHEIGHT" size="10" />
+		<param name="colorSchemeActivityFeed" type="radio" default="light" label="Color Scheme" description="The color scheme of the plugin.">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</param>
+		<param name="showHeaderActivityFeed" type="radio" default="1" label="Show Header" description="Show the Facebook header on the plugin.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+		<param type="spacer" default=" " label="" description="" />
+		<param type="spacer" default="&lt;b&gt;Recommendations&lt;/b&gt;" label="" description="" />
+		<param type="spacer" default="RECOMMENDATIONSDESC" label="" description="" />
+		<param name="domainRecommendations" type="text" default="joomla.org" label="Domain" description="The domain for which to show recommendations." size="40" />
+		<param name="codeTypeRecommendations" type="radio" default="iframe" label="Code Type" description="The XFBML version is more versatile, but requires use of the JavaScript SDK.">
+			<option value="iframe">iframe</option>
+			<option value="XFBML">XFBML</option>
+		</param>
+		<param name="widthRecommendations" type="text" default="250" label="Width" description="PLUGINWIDTH" size="10" />
+		<param name="heightRecommendations" type="text" default="600" label="Height" description="PLUGINHEIGHT" size="10" />
+		<param name="colorSchemeRecommendations" type="radio" default="light" label="Color Scheme" description="PLUGINCOLORSCHEME">
+			<option value="light">light</option>
+			<option value="dark">dark</option>
+		</param>
+		<param name="showHeaderRecommendations" type="radio" default="1" label="Show Header" description="Show the Facebook header on the plugin.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="other">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

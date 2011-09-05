@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Twitter box</name>
+	<author>Sanjeev Shrestha</author>
+	<creationDate>Dec 2009</creationDate>
+	<copyright>(C) 2008 - 2009 www.joomlaguru.com.np</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>info@joomlaguru.com.np</authorEmail>
+	<authorUrl>www.joomlaguru.com.np</authorUrl>
+	<version>1.2</version>
+	<description>
+		This module shows Latest tweets from your twitter. Visit &lt;a href="http://www.joomlaguru.com.np"&gt; www.joomlaguru.com.np&lt;/a&gt;
+	</description>
+	<files>
+		<filename module="mod_ostwitterbox">mod_ostwitterbox.php</filename>
+		<filename >helper.php</filename>
+		<filename >index.html</filename>
+		<folder>tmpl</folder>
+		<folder>includes</folder>
+	</files>
+<languages folder="lang">
+                <language tag="en-GB">en-GB.mod_ostwitterbox.ini</language>
+        </languages>
+
+	<params>
+		<param name="moduleclass_sfx" type="text" default=""
+			label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="count" type="text" default="8" label="Count"	description="Number of tweets" />
+		<param name="tusername" type="text" default="" label="Twitter Username"	description="Twitter Username" />
+		<param name="tpassword" type="password" default="" label="Twitter Password"	description="Twitter Password" />
+		<param name="timeline" type="list" label="Timeline to show" default="friends" description="Select Timeline to show">
+		<option value="friends">Friend And My Timeline</option>
+		<option value="mine">Only My Timeline</option>
+		<option value="home">My Homepage Timeline</option>
+		</param>
+		<param name="ttemplate" type="textarea"  rows="5" cols="40" default="{tweet} - {postdate} {username} " label="Twitter Template"	description="You can use following &lt;br/&gt; {username} {tweet} {postdate} {userimg} {userurl} {tweetlink} {source} {reply_to} {reply_to_user}" />
+			
+		
+	</params>
+
+</install>
+
