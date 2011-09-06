@@ -1,7 +1,7 @@
 <?php
 class JConfig {
 	var $offline = '0';
-	var $editor = 'tinymce';
+	var $editor = 'jce';
 	var $list_limit = '20';
 	var $helpurl = 'http://help.joomla.org';
 	var $debug = '0';

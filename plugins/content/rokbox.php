@@ -2,9 +2,9 @@
 /**
  * @package rokbox
  * @subpackage plg_content_rokbox
- * @version 1.5 February 4, 2010
+ * @version 1.9 July 15, 2011
  * @author RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  **/
 // no direct access
@@ -82,8 +82,8 @@ class plgContentRokbox extends JPlugin
     	/* thumbnail settings */
     	$improve_thumbnails = false; // Auto Contrast, Unsharp Mask, Desaturate,  White Balance
     	$thumb_quality = $thumb_quality;
-    	$width = $thumb_width;
-    	$height = $thumb_height;
+    	$width = $thumb_size_width = $thumb_width;
+    	$height = $thumb_size_height = $thumb_height;
 
     	/* slimbox = lightbox mode */
     	if ($compatibility == "slimbox") $compatibility = "lightbox";
@@ -97,48 +97,65 @@ class plgContentRokbox extends JPlugin
 			$thesize = '';
 			$thetext = '';
 			$themodule = '';
+			$thethumbsize = '';
 			$thethumbcount = 999;
     	    if (@$matches[1][$i]) {
         		$inline_params = $matches[1][$i];
 
         		// get album
         		$album_matches = array();
-        		preg_match( "#album=\|(.*?)\|#s", $inline_params, $album_matches );
+        		preg_match( "# album=\|(.*?)\|#s", $inline_params, $album_matches );
         		if (isset($album_matches[1])) $thealbum = "(" . trim($album_matches[1]) . ")";
 
 				// get size
 				$size_matches = array();
-				preg_match( "#size=\|(.*?)\|#s", $inline_params, $size_matches );
+				preg_match( "# size=\|(.*?)\|#s", $inline_params, $size_matches );
 				if (isset($size_matches[1])) $thesize = "[" . trim($size_matches[1]) . "]";
 
         		// get title
         		$title_matches = array();
-        		preg_match( "#title=\|(.*?)\|#s", $inline_params, $title_matches );
+        		preg_match( "# title=\|(.*?)\|#s", $inline_params, $title_matches );
         		if (isset($title_matches[1])) $thetitle =  $title_matches[1];
 				
         		// get text
         		$text_matches = array();
-        		preg_match( "#text=\|(.*?)\|#s", $inline_params, $text_matches );
+        		preg_match( "# text=\|(.*?)\|#s", $inline_params, $text_matches );
         		if (isset($text_matches[1])) $thetext =  $text_matches[1];
 				
 				// force image
         		$type_matches = array();
-        		preg_match( "#type=\|(.*?)\|#s", $inline_params, $type_matches );
+        		preg_match( "# type=\|(.*?)\|#s", $inline_params, $type_matches );
         		if (isset($type_matches[1])) $thetype = $type_matches[1];
 
         		// get module
         		$module_matches = array();
-        		preg_match( "#module=\|(.*?)\|#s", $inline_params, $module_matches );
+        		preg_match( "# module=\|(.*?)\|#s", $inline_params, $module_matches );
         		if (isset($module_matches[1])) $themodule =  "[module=".$module_matches[1]."]";
 
         		// get thumb
         		$thumb_matches = array();
-        		preg_match( "#thumb=\|(.*?)\|#s", $inline_params, $thumb_matches );
+        		preg_match( "# thumb=\|(.*?)\|#s", $inline_params, $thumb_matches );
         		if (isset($thumb_matches[1])) $thethumb =  $thumb_matches[1];
+
+        		// get thumb sizes
+        		$thumbsize_matches = array();
+        		preg_match( "# thumbsize=\|(.*?)\|#s", $inline_params, $thumbsize_matches );
+			
+				$thumb_size_width = $thumb_width;
+				$thumb_size_height = $thumb_height;
+        		if (isset($thumbsize_matches[1])) {
+					$thethumbsize =  $thumbsize_matches[1];
+					$tsize = explode(" ", $thethumbsize);
+					if (count($tsize) == 1) {$thumb_size_width = $thumb_size_height = $tsize[0];}
+					elseif (count($tsize) == 2) {
+						$thumb_size_width = $tsize[0];
+						$thumb_size_height = $tsize[1];
+					}
+				}
         		
         		// get thumb count
         		$thumbcount_matches = array();
-        		preg_match( "#thumbcount=\|(.*?)\|#s", $inline_params, $thumbcount_matches );
+        		preg_match( "# thumbcount=\|(.*?)\|#s", $inline_params, $thumbcount_matches );
         		if (isset($thumbcount_matches[1])) $thethumbcount =  $thumbcount_matches[1];
         	}
 
@@ -155,6 +172,11 @@ class plgContentRokbox extends JPlugin
 			
 			if (!is_array($tmp)) $tmp = array(trim($matches[2][$i]));
 			
+			if (count($tmp) > 1) {
+				$text .= '<div class="rokbox-album-wrapper">';
+				$text .= '<div class="rokbox-album-top"><div class="rokbox-album-top2"><div class="rokbox-album-top3"></div></div></div>';
+				$text .= '<div class="rokbox-album-inner">';
+			}
 			foreach ($tmp as $link){
 				
 				if (count($tmp) > 1) {
@@ -214,15 +236,15 @@ class plgContentRokbox extends JPlugin
 						else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '">'.$thetitle.'</a>';
 					} else {
 						if (strlen($thethumb) > 0) {
-							if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thethumb . '" alt="' . $thetitle . '" /></a>';
-							else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thethumb . '" alt="' . $thetitle . '" /></a>';
+							if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thethumb . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
+							else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thethumb . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
 				        	} elseif (!$thumb_custom && file_exists($thumb_path)) {
 				        		// thumbnail exists so can do lightbox with thumbnail
-				        		if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" /></a>';
-							else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" /></a>';
+				        		if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
+							else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
 				        	} elseif (file_exists($thumb_path_custom)) {
-							if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url_custom . '" alt="' . $thetitle . '" /></a>';
-				        		else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url_custom . '" alt="' . $thetitle . '" /></a>';
+							if (strlen($themodule)) $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . $themodule . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url_custom . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
+				        		else $text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url_custom . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
 				        	} elseif ($isimage || $thetype == 'image')  {
 				        		//try to generate thumbs
 				        		if ($thumb_custom) $thumb_path = $thumb_path_custom;
@@ -230,15 +252,27 @@ class plgContentRokbox extends JPlugin
 				        		$rd = new imgRedim(false, $improve_thumbnails, JPATH_CACHE);
 				        		$image_filename = $full_path; // define source image here
 				        		$output_filename = $thumb_path; // define destination image here
-			
+								
+								$image_size = @getimagesize($image_filename);
+								
 				        		$rd->loadImage($image_filename);
+								
+								if ($image_size[0] < $width) $width = $thumb_size_width = $image_size[0];
+								if ($image_size[1] < $height) $height = $thumb_size_height = $image_size[1];
+								
 				        		$rd->redimToSize($width, $height, true);
 				        		$rd->saveImage($output_filename, $thumb_quality);
-				        		$text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" /></a>';
+								
+				        		$text = $text . '<a href="' . $link . '" rel="' . $compatibility . $thesize . $thealbum . $displaythumb . '" title="' . $thetitle . '"><img class="'. $thumb_class . '" src="' . $thumb_url . '" alt="' . $thetitle . '" width="'.$thumb_size_width.'" height="'.$thumb_size_height.'" /></a>';
 			        		}
 					}
 					$text = $text . ' ';
 				}
+			}
+			if (count($tmp) > 1) {
+				$text .= '</div>';
+				$text .= '<div class="rokbox-album-bottom"><div class="rokbox-album-bottom2"><div class="rokbox-album-bottom3"></div></div></div>';
+				$text .= '</div>';
 			}
 			$row->text = str_replace( $matches[0][$i], $text, $row->text );
 	}

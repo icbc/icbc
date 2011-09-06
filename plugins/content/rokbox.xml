@@ -2,12 +2,12 @@
 <install version="1.5" type="plugin" group="content">
 	<name>Content - RokBox</name>
 	<author>RocketTheme, LLC</author>
-	<creationDate>February 4, 2010</creationDate>
-	<copyright>(C) 2005 - 2010 RocketTheme, LLC. All rights reserved.</copyright>
+	<creationDate>July 15, 2011</creationDate>
+	<copyright>(C) 2005 - 2011 RocketTheme, LLC. All rights reserved.</copyright>
 	<license>${licence}</license>
 	<authorEmail>support@rockettheme.com</authorEmail>
 	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<version>1.5</version>
+	<version>1.9</version>
 	<description>To be used with a RokBox enabled RocketTheme Joomla! template.  Syntax is {rokbox}link{/rokbox}.  If you want the image to be part of an 'album', you can use the syntax {rokbox album=|albumname|}link{/rokbox}.  To provide text descriptions, please use the syntax {rokbox title=|your description|}link{/rokbox}. To specify a thumbnail, use the syntax {rokbox thumb=|thumbnail_link.jpg|}link{/rokbox}. If you want to use a text link, you can specify the text using syntax: {rokbox text=|your link text here|}link{/rokbox}. You can also use album, title, thumb and text in the same tag.</description>
 	<files>
 		<filename plugin="rokbox">rokbox.php</filename>
