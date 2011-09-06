@@ -61,7 +61,7 @@ if ( ! defined('modRokNavMenuShowItems') )
 function showItem(&$item, &$menu) {
     
     global $activeid;
-   
+
     //not so elegant solution to add subtext
     $item->subtext = $item->getParameter('splitmenu_item_subtext','');
     if ($item->subtext=='') $item->subtext = false;
@@ -95,7 +95,7 @@ function showItem(&$item, &$menu) {
 	</ul>
 	<?php endif; ?>
 	
-</li>	
+</li>
 <?php
 } 
 define('modRokNavMenuShowItems', true);
