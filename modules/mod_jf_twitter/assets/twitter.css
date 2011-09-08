@@ -1,0 +1,185 @@
+/* @author		JOOFORGE.com
+ * @copyright	Copyright(C) 2010 Jooforge
+ * @licence		GNU/GPL http://www.gnu.org/copyleft/gpl.html */
+ 
+div.jf_twitter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+div.jf_twitter div {
+	width: auto !important; /* ja_purity bug */
+}
+
+div.jf_twitter .tw_top {
+	background: url(../images/top-l.png) no-repeat 0 0;
+	padding: 0 0 0 4px;
+}
+
+div.jf_twitter .tw_top div {
+	background: url(../images/top-r.png) no-repeat 100% 0;
+	padding: 0 4px 0 0;
+}
+
+div.jf_twitter .tw_top div div {
+	background: #FFF url(../images/top-m.png) repeat-x 0 0;
+	padding: 0;
+	height: 4px;
+	overflow: hidden;
+}
+
+/* Main */
+
+div.jf_twitter div.tw_main {
+	width: 100%;
+}
+
+div.jf_twitter div.tw_profile {
+	background: url(../images/profile.png) no-repeat 50% 100%;
+	padding: 0 10px 6px;
+	overflow: hidden;
+	padding-bottom: 16px;
+	margin-bottom: 8px;
+}
+
+div.jf_twitter div.tw_profile img {
+	float: left;
+	margin-right: 7px;
+	width: 24px;
+	height: 24px;
+}
+
+div.jf_twitter h4.tw_user {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 24px;
+	margin: 0;
+}
+
+div.jf_twitter h4.tw_user a {
+	color: #333;
+	text-decoration: none;
+	background: none;
+	font-weight: bold;
+}
+
+div.jf_twitter h4.tw_user a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+
+div.jf_twitter div.tw_main {
+	background-color: #FFF;
+	border-left: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	padding: 8px 0;
+}
+
+div.jf_twitter div.tw_tweets,
+div.jf_twitter div.tw_rail {
+	overflow: hidden;
+}
+
+div.jf_twitter div.tw_tweet {
+	padding: 5px 10px;
+	display: block;
+	font-size: 11px;
+	text-decoration: none;
+	cursor: pointer;
+	line-height: 13.6px
+}
+
+div.jf_twitter div.tw_page span {
+	font-weight: normal;
+	color: #999;
+}
+
+div.jf_twitter div.tw_page span.tw_date {
+	display: block;
+	font-style: italic;
+	color: #55bad2;
+	margin-bottom: 3px
+}
+
+div.jf_twitter div.tw_tweet:hover {
+	background: #E1EFF2;
+}
+
+div.jf_twitter div.tw_tweet a {
+	color: #335171;
+}
+
+div.jf_twitter div.tw_tweet a:hover {
+	text-decoration: underline;
+}
+
+/* Bottom */
+
+div.jf_twitter div.tw_bottom {
+	background: url(../images/bottom-l.png) no-repeat 0 100%;
+	padding: 0 0 0 39px;
+}
+
+div.jf_twitter div.tw_bottom div {
+	background: url(../images/bottom-r.png) no-repeat 100% 0;
+	padding: 0 4px 0 0;
+}
+
+div.jf_twitter div.tw_bottom div div {
+	background: url(../images/bottom-m.png) repeat-x 0 0;
+	padding: 0;
+	height: 16px;
+	overflow: hidden;
+}
+
+/* Sub */
+
+div.jf_twitter div.tw_sub {
+	position: relative;
+	height: 48px;
+}
+
+div.jf_twitter div.tw_sub img {
+	position: relative;
+	top: -6px;
+	left: 33px;
+}
+
+div.jf_twitter div.tw_sub img.e {
+	left: 43px;
+}
+
+div.jf_twitter div.tw_controls {
+	position: absolute;
+	top: -6px;
+	right: 8px;
+}
+
+div.jf_twitter div.tw_controls a {
+	display: block;
+	float: left;
+	width: 10px;
+	height: 10px;
+	background: url(../images/controls.png) no-repeat;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+div.jf_twitter div.tw_controls a.tw_previous {
+	background-position: 0 0;
+	margin-right: 2px;
+}
+
+div.jf_twitter div.tw_controls a.tw_previous.disabled {
+	background-position: 0 100%;
+}
+
+div.jf_twitter div.tw_controls a.tw_next {
+	background-position: 100% 0;
+	margin-left: 2px;
+}
+
+div.jf_twitter div.tw_controls a.tw_next.disabled {
+	background-position: 100% 100%;
+}

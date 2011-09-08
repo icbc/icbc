@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5" method="upgrade">
+	<name>JF Twitter</name>
+	<version>2.3</version>
+	
+	<creationDate>August 2010</creationDate>
+	<author>JooForge</author>
+	<authorEmail>info@jooforge.com</authorEmail>
+	<authorUrl>http://www.jooforge.com/</authorUrl>
+	<copyright>Copyright(C) 2010 JooForge</copyright>
+	<licence>GNU/GPL http://www.gnu.org/copyleft/gpl.html</licence>
+	
+	<description>JF Twitter<![CDATA[<pre>
++ added   |
+# fixed   |
+^ changed |
+- removed |
+----------
+
+[2.3]
+- Removed password from connection options
++ Error message if something goes wrong
+
+[2.2]
+# Layout staggered with ja_purity template
+# Next button enabled with only one page
+
+[2.1]
++ Added JSON support library if not supported natively
+
+[2.0]
+^ Fully rewrited xhtml markup
++ Total tweets to grab from twitter
+- Unstable twitter interfacing library
++ New robust and fast lib developed ad hoc
+^ Faster javascript effects
++ Module upgrade system enabled (no uninstall before update)
++ Automated system for parsing urls, arguments, users, etc..
+^ Date display format changed to "since" method (2 seconds ago, 3 hours ago, etc..)
+
+[1.0]
+Initial release
+	</pre>]]></description>
+	
+	<files>
+		<folder>assets</folder>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+		<folder>lib</folder>
+		<filename module="mod_jf_twitter">mod_jf_twitter.php</filename>
+		<filename>mod_jf_twitter.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.mod_jf_twitter.ini</language>
+		<language tag="it-IT">it-IT.mod_jf_twitter.ini</language>
+	</languages>
+	
+	<params>
+		<param name="username" type="text" label="USER"	description="USERDESC" />
+		<param name="showuser" type="radio" label="SHOWUSER" default="1" description="SHOWUSERDESC">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="total" type="text" label="TOTAL" default="18" description="TOTAL" />
+		<param name="page" type="text" label="PAGE" default="3" description="PAGEDESC" />
+	</params>
+	<params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

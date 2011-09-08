@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.5" type="plugin" group="content" method="upgrade">
+  <name>Sharable</name>
+  <author>P.J. Swesey</author>
+  <creationDate>June 24th, 2011</creationDate>
+  <copyright>(C)2011 JoomlaDigger.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail>webmaster@joomladigger.com</authorEmail>
+  <authorUrl>http://joomladigger.com</authorUrl>
+  <version>1.0.3</version>
+  <description>
+    Sharable - A content plugin for Joomla! articles. This flexible plugin will place social sharing badges in your articles in a clean and non-intrusive way, similar to Mashable.com. Visit JoomlaDigger.com for free support, and information on bringing more traffic to your website and making more money.
+  </description>
+  <files>
+    <filename plugin="sharable">sharable.php</filename>
+    <filename>sharable.xml</filename>
+		<filename>sharable.css</filename>
+  </files>
+
+  <params>
+		<param type="spacer" default="&lt;b&gt;General Params&lt;/b&gt;" />
+    <param name="preview_display" type="list" default="top" label="Article Preview Display" description="How do you want to display the buttons on article previews?">
+      <option value="top">Top</option>
+      <option value="bottom">Bottom</option>
+      <option value="none">Do not display</option>
+    </param>
+		<param name="article_display" type="list" default="top" label="Full Article Display" description="How do you want to display the buttons on the full articles?">
+      <option value="top">Top</option>
+      <option value="bottom">Bottom</option>
+      <option value="none">Do not display</option>
+    </param>
+		<param name="preview_style" type="text" default="float:right; text-align:right;" label="Preview CSS Styles" description="CSS styles for the div wrapping the buttons on article previews."/>
+		<param name="article_style" type="text" default="float:right; text-align:right;" label="Article CSS Styles" description="CSS styles for the div wrapping the buttons on full articles."/>
+		<param name="preview_preceding_html" type="text" default="" label="Preview Preceding HTML" description="HTML to be displayed before the buttons on article previews."/>
+    <param name="preview_following_html" type="text" default="" label="Preview Following HTML" description="HTML to be displayed after the buttons on article previews."/>
+    <param name="article_preceding_html" type="text" default="" label="Article Preceding HTML" description="HTML to be displayed before the buttons on full articles."/>
+    <param name="article_following_html" type="text" default="&lt;br /&gt;&lt;a href=&quot;http://joomladigger.com&quot; title=&quot;Social Sharing buttons for Joomla!&quot; target=&quot;_blank&quot; style=&quot;font-size:9px&quot;&gt;Add this to your website&lt;/a&gt;" label="Article Following HTML" description="HTML to be displayed after the buttons on full articles."/>
+		<param name="excluded_categories" type="text" default="" label="Excluded Categories" description="Comma-separated list of category IDs to exclude. Add 0 to not display these buttons on uncategorized articles."/>
+		
+		
+		<param type="spacer" default="&lt;b&gt;Facebook Button&lt;/b&gt;" />
+			<param name="facebook_order" type="text" default="1" label="Order" description="Order of this button."/>
+			<param name="facebook_preview_display" type="list" default="big" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="facebook_article_display" type="list" default="big" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="facebook_preview_send" type="list" default="1" label="Preview Send" description="Do you want to include Send with the Facebook button on article previews?">
+	      <option value="1">Yes</option>
+				<option value="0">No</option>
+	    </param>
+			<param name="facebook_article_send" type="list" default="1" label="Article Send" description="Do you want to include Send with the Facebook button on full articles?">
+	      <option value="1">Yes</option>
+				<option value="0">No</option>
+	    </param>
+			<param name="facebook_color" type="list" default="light" label="Color Scheme" description="You can choose a light or dark color scheme for the Facebook button.">
+	      <option value="dark">Dark</option>
+				<option value="light">Light</option>
+	    </param>
+			<param name="facebook_font" type="list" default="arial" label="Button Font" description="Which font do you want the Facebook button to use?">
+	      <option value="arial">arial</option>
+				<option value="lucida grande">lucida grande</option>
+				<option value="segoe ui">segoe ui</option>
+				<option value="tahoma">tahoma</option>
+				<option value="trebuche ms">trebuche ms</option>
+				<option value="verdana">verdana</option>
+	    </param>
+			<param name="facebook_include_root" type="list" default="yes" label="Include fb-root div" description="Facebook plugins require that a div with id &quot;fb-root&quot; be included on the page. If your site's HTML already has Facebook Connect or another Facebook plugin, that div is already included so you should set this to &quot;no&quot;.">
+	      <option value="yes">Yes</option>
+				<option value="no">No</option>
+	    </param>
+	
+	
+		<param type="spacer" default="&lt;b&gt;StumbleUpon Button&lt;/b&gt;" />
+			<param name="stumbleupon_order" type="text" default="2" label="Order" description="Order of this button."/>
+			<param name="stumbleupon_preview_display" type="list" default="none" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="stumbleupon_article_display" type="list" default="none" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+	
+	
+	
+		<param type="spacer" default="&lt;b&gt;Google +1 Button&lt;/b&gt;" />
+			<param name="google_order" type="text" default="3" label="Order" description="Order of this button."/>
+			<param name="google_preview_display" type="list" default="big" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="google_article_display" type="list" default="big" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+		
+		
+		
+		<param type="spacer" default="&lt;b&gt;Twitter Button&lt;/b&gt;" />
+			<param name="twitter_order" type="text" default="4" label="Order" description="Order of this button."/>
+			<param name="twitter_preview_display" type="list" default="big" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+	      <option value="small_no_number">Small with no number</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="twitter_article_display" type="list" default="big" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+	      <option value="small_no_number">Small with no number</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="twitter_mention_account" type="text" default="" label="@ Mention account" description="The Twitter user account to @mention in the Tweet. Optional."/>
+			<param name="twitter_related_account" type="text" default="" label="Related account" description="The Twitter user account related to this article. Optional."/>
+			<param name="twitter_related_desc" type="text" default="" label="Related account description" description="Short description of the related account. Optional."/>
+		
+		
+		
+		<param type="spacer" default="&lt;b&gt;LinkedIn Button&lt;/b&gt;" />
+			<param name="linkedin_order" type="text" default="5" label="Order" description="Order of this button."/>
+			<param name="linkedin_preview_display" type="list" default="none" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+	      <option value="small_no_number">Small with no number</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="linkedin_article_display" type="list" default="none" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+	      <option value="small_no_number">Small with no number</option>
+				<option value="none">Do not display</option>
+	    </param>
+		
+		
+		
+		<param type="spacer" default="&lt;b&gt;Reddit Button&lt;/b&gt;" />
+			<param name="reddit_order" type="text" default="6" label="Order" description="Order of this button."/>
+			<param name="reddit_preview_display" type="list" default="none" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="wide">Big Wide</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="reddit_article_display" type="list" default="none" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="wide">Big Wide</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+		
+		
+		
+		<param type="spacer" default="&lt;b&gt;Digg Button&lt;/b&gt;" />
+			<param name="digg_order" type="text" default="7" label="Order" description="Order of this button."/>
+			<param name="digg_preview_display" type="list" default="none" label="Preview Size" description="What size do you want this button on the article previews?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+			<param name="digg_article_display" type="list" default="none" label="Article Size" description="What size do you want this button on the full articles?">
+	      <option value="big">Big</option>
+	      <option value="small">Small</option>
+				<option value="none">Do not display</option>
+	    </param>
+
+
+    
+    
+
+  </params>
+</install>

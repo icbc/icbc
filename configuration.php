@@ -15,8 +15,8 @@ class JConfig {
 	var $gzip = '0';
 	var $error_reporting = '-1';
 	var $xmlrpc_server = '0';
-	var $log_path = '/var/www/icbc/logs';
-	var $tmp_path = '/var/www/icbc/tmp';
+	var $log_path = '/home/webapps/webicbc.4click.com.br/logs';
+	var $tmp_path = '/home/webapps/webicbc.4click.com.br/tmp';
 	var $live_site = '';
 	var $force_ssl = '0';
 	var $offset = '0';
@@ -31,9 +31,9 @@ class JConfig {
 	var $ftp_pass = '';
 	var $ftp_root = '';
 	var $dbtype = 'mysql';
-	var $host = 'mysql07.4click.tv.br';
-	var $user = 'w4click6';
-	var $db = 'w4click6';
+	var $host = 'localhost';
+	var $user = 'uswebdbicbc';
+	var $db = 'dbwebicbc';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
 	var $mailfrom = 'dev@icbc.org.br';
@@ -49,7 +49,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '15';
 	var $session_handler = 'database';
-	var $password = 'IcbcDb1102';
+	var $password = 'WDNSTeKHmWnmh4Fj';
 	var $sitename = 'ICBC - Bolsa Cultural';
 	var $MetaDesc = 'Joomla! - O sistema dinâmico de portais e gerenciador de conteúdo';
 	var $MetaKeys = 'joomla, Joomla';
