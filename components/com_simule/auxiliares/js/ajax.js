@@ -4,17 +4,6 @@ function iniciaAjax(){
 	if(window.XMLHttpRequest){
 		objAjax = new XMLHttpRequest();
 	} else if(window.ActiveXObject) {
-<<<<<<< HEAD
-		objAjax = new ActiveXObject("Msxml2.XMLHTTP");
-		if(!objAjax){
-			objAjax = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-	}
-	else{
-		alert("Seu navegador não tem suporte para executar esta navegação.");
-	}
-	return objAjax;
-=======
 		try{
 			objAjax = new ActiveXObject("Msxml2.XMLHTTP");
 		}
@@ -42,5 +31,4 @@ if(requisicaoAjax){
 			}
 		}
 	}
->>>>>>> c507666c2edd9975413869ada4790d46632cde3e
 }

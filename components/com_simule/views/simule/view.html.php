@@ -5,13 +5,14 @@ class SimuleFrontViewSimule extends JView{
 		$documento =& JFactory::getDocument();
 		$documento->addStyleSheet("components/com_simule/auxiliares/css/estilo.css");
 		$documento->addScript("components/com_simule/auxiliares/js/ajax.js");
+		$documento->addScript("components/com_simule/auxiliares/js/simule.js");
 		$registro->imposto = null;
 		$registro->doacao = null;
 		$registro->pessoa = "pj";
 		//estrutura de formação campo tipo de pessoa, buscando mostrar estre pessoa física e jurícias
 		$listaPessoa[] = JHTML::_("select.option", "pf", "Pessoa física");
 		$listaPessoa[] = JHTML::_("select.option", "pj", "Pessoa Jurídica");
-		$pessoa = JHTML::_("select.radiolist", $listaPessoa, "tipoPessoa", null, "value", "text", $registro->pessoa);
+		$pessoa = JHTML::_("select.radiolist", $listaPessoa, "tipoPessoa", "onclick='verificaValor()'", "value", "text", $registro->pessoa);
 		//estrutura de formação campo tipo de incentivo, verificando se é por doação ou por patrocínio
 		$listaIncentivo[] = JHTML::_("select.option", "d", "Doação");
 		$listaIncentivo[] = JHTML::_("select.option", "p", "Patrocínio");
