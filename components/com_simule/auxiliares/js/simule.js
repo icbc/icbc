@@ -7,13 +7,12 @@ function formataValor(valor){
 	valor = valor.replace(",",".");
 	return valor;
 }
-function analise(lucroReal, deducao, procentagem, tipo){
-	lucroReal = formataValor(lucroReal);
-	deducao = formataValor(deducao);
+function analisePF(valor, patrocinio, tipo){
+	valor = formataValor(valor);
+	deducao = formataValor(patrocinio);
 	var csll = null;
-	var campoCsll = document.getElementById("campoCsll");
-	var campoIR = document.getElementById("campoIR");
-	var campoAddIR = document.getElementById("campoAddIR");
+	var campoValor = document.getElementById("campoValor");
+	var campoPatrocinio = document.getElementById("campoPatrocinio");
 	var campoDeducao = document.getElementById("campoDeducao");
 	var campoIRPagar = document.getElementById("campoIRPagar");
 	var campoTotalImposto = document.getElementById("campoTotalImposto");
@@ -27,23 +26,23 @@ function analise(lucroReal, deducao, procentagem, tipo){
 	
 	var botoes = document.getElementById("botoes");
 	
-	csll = lucroReal*0.09;
+	csll = valor*0.09;
 	if(deducao != ""){
-		if(deducao > lucroReal*procentagem){
-			deducao = lucroReal*procentagem
+		if(deducao > valor*0.06){
+			deducao = valor*0.06;
 		}
 	}
 	else{
 		deducao = 0;
 	}
-	ir = lucroReal*0.15;
-	addIR = (lucroReal-240000)*0.1;
+	ir = valor*0.15;
+	addIR = (valor-240000)*0.1;
 	if(addIR < 0){
 		addIR = 0;
 	}
 	IRPagar = (ir + addIR) - deducao;
 	totalImpostos = IRPagar + csll;
-	lucroLiquido = lucroReal - totalImpostos - deducao;
+	lucroLiquido = valor - totalImpostos - deducao;
 	
 	csll = float2moeda(csll);
 	ir = float2moeda(ir);
@@ -64,6 +63,9 @@ function analise(lucroReal, deducao, procentagem, tipo){
 		linhaIRPagar.style.display = "none";
 		linhaLucroLiquido.style.display = "none";
 		
+		campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		campoPatrocinio.innerHTML = "<input type=\"text\" class=\"medio\" id=\"patrocinio\" name=\"patrocinio\" maxlenght=\"150\" value=\""+patrocinio+"\" onblur=\"simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		
 		botao = "<button type=\"button\" name=\"task\" valeu=\"simuleSimples\" id=\"simuleSimples\" onclick=\"simula('simples');verificaValor();\">Simule</button>";
 		botao += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		botao +="<button type=\"button\" name=\"task\" valeu=\"simuleCompleta\" id=\"simuleCompleta\" onclick=\"simula('completa');verificaValor();\">Detalhada</button>";
@@ -79,6 +81,101 @@ function analise(lucroReal, deducao, procentagem, tipo){
 		campoTotalImposto.innerHTML = totalImpostos;
 		campoLucroLiquido.innerHTML = lucroLiquido;
 
+		campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('completa');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		campoPatrocinio.innerHTML = "<input type=\"text\" class=\"medio\" id=\"patrocinio\" name=\"patrocinio\" maxlenght=\"150\" value=\""+patrocinio+"\" onblur=\"simula('completa');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		
+		botao = "<button type=\"button\" name=\"task\" valeu=\"simuleCompleta\" id=\"simuleCompleta\" onclick=\"simula('completa');verificaValor();\">Simule</button>";
+		botao += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		botao +="<button type=\"button\" name=\"task\" valeu=\"simuleSimples\" id=\"simuleSimples\" onclick=\"simula('simples');verificaValor();\">Simplificada</button>";
+		botoes.innerHTML = botao;
+		
+		linhaCsll.style.display = "";
+		linhaIR.style.display = "";
+		linhaAddIR.style.display = "";
+		linhaIRPagar.style.display = "";
+		linhaLucroLiquido.style.display = "";
+	}
+}
+function analisePJ(valor, patrocinio, procentagem, tipo){
+	valor = formataValor(valor);
+	deducao = formataValor(patrocinio);
+	var csll = null;
+	var campoValor = document.getElementById("campoValor");
+	var campoPatrocinio = document.getElementById("campoPatrocinio");
+	var campoCsll = document.getElementById("campoCsll");
+	var campoIR = document.getElementById("campoIR");
+	var campoAddIR = document.getElementById("campoAddIR");
+	var campoDeducao = document.getElementById("campoDeducao");
+	var campoIRPagar = document.getElementById("campoIRPagar");
+	var campoTotalImposto = document.getElementById("campoTotalImposto");
+	var campoLucroLiquido = document.getElementById("campoLucroLiquido");
+	
+	var linhaCsll = document.getElementById("linhaCsll");
+	var linhaIR = document.getElementById("linhaIR");
+	var linhaAddIR = document.getElementById("linhaAddIR");
+	var linhaIRPagar = document.getElementById("linhaIRPagar");
+	var linhaLucroLiquido = document.getElementById("linhaLucroLiquido");
+	
+	var botoes = document.getElementById("botoes");
+	
+	csll = valor*0.09;
+	if(deducao != ""){
+		if(deducao > valor*procentagem){
+			deducao = valor*procentagem
+		}
+	}
+	else{
+		deducao = 0;
+	}
+	ir = valor*0.15;
+	addIR = (valor-240000)*0.1;
+	if(addIR < 0){
+		addIR = 0;
+	}
+	IRPagar = (ir + addIR) - deducao;
+	totalImpostos = IRPagar + csll;
+	lucroLiquido = valor - totalImpostos - deducao;
+	
+	csll = float2moeda(csll);
+	ir = float2moeda(ir);
+	addIR = float2moeda(addIR);
+	deducao = float2moeda(deducao);
+	totalImpostos = float2moeda(totalImpostos);
+	IRPagar = float2moeda(IRPagar);
+	lucroLiquido = float2moeda(lucroLiquido);
+	
+	if(tipo == "simples"){
+		campoIRPagar.innerHTMl = IRPagar;
+		campoDeducao.innerHTML = deducao;
+		campoTotalImposto.innerHTML = totalImpostos;
+		
+		linhaCsll.style.display = "none";
+		linhaIR.style.display = "none";
+		linhaAddIR.style.display = "none";
+		linhaIRPagar.style.display = "none";
+		linhaLucroLiquido.style.display = "none";
+		
+		campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		campoPatrocinio.innerHTML = "<input type=\"text\" class=\"medio\" id=\"patrocinio\" name=\"patrocinio\" maxlenght=\"150\" value=\""+patrocinio+"\" onblur=\"simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		
+		botao = "<button type=\"button\" name=\"task\" valeu=\"simuleSimples\" id=\"simuleSimples\" onclick=\"simula('simples');verificaValor();\">Simule</button>";
+		botao += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		botao +="<button type=\"button\" name=\"task\" valeu=\"simuleCompleta\" id=\"simuleCompleta\" onclick=\"simula('completa');verificaValor();\">Detalhada</button>";
+		botoes.innerHTML = botao;
+	}
+	if(tipo == "completa"){
+		campoIRPagar.innerHTMl = IRPagar;
+		campoCsll.innerHTML = csll;
+		campoIR.innerHTML = ir;
+		campoAddIR.innerHTML = addIR;
+		campoDeducao.innerHTML = deducao;
+		campoIRPagar.innerHTML = IRPagar;
+		campoTotalImposto.innerHTML = totalImpostos;
+		campoLucroLiquido.innerHTML = lucroLiquido;
+
+		campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('completa');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		campoPatrocinio.innerHTML = "<input type=\"text\" class=\"medio\" id=\"patrocinio\" name=\"patrocinio\" maxlenght=\"150\" value=\""+patrocinio+"\" onblur=\"simula('completa');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
+		
 		botao = "<button type=\"button\" name=\"task\" valeu=\"simuleCompleta\" id=\"simuleCompleta\" onclick=\"simula('completa');verificaValor();\">Simule</button>";
 		botao += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		botao +="<button type=\"button\" name=\"task\" valeu=\"simuleSimples\" id=\"simuleSimples\" onclick=\"simula('simples');verificaValor();\">Simplificada</button>";
@@ -92,27 +189,27 @@ function analise(lucroReal, deducao, procentagem, tipo){
 	}
 }
 function simula(tipo){
-	var lucroReal = document.getElementById("lucroReal").value;
+	var valor = document.getElementById("valor").value;
 	var patrocinio = document.getElementById("patrocinio").value;
 	var pessoaFisica = document.getElementsByName("tipoPessoa")[1].checked;
 	var pessoaJuridica = document.getElementsByName("tipoPessoa")[0].checked;
 	if(pessoaJuridica== true)
-		analise(lucroReal, patrocinio, 0.04, tipo);
+		analisePJ(valor, patrocinio, 0.04, tipo);
 	if(pessoaFisica == true)
-		analise(lucroReal, patrocinio, 0.06, tipo);
+		analisePF(valor, patrocinio, 0.06, tipo);
 }
 function validaTipoPessoa(){
 	var pessoaFisica = document.getElementsByName("tipoPessoa")[1].checked;
 	var pessoaJuridica = document.getElementsByName("tipoPessoa")[0].checked;
-	var labellucroReal = document.getElementById("labellucroReal");
+	var valor = document.getElementById("labelValor");
 	if(pessoaJuridica == true)
-		labellucroReal.innerHTML = "<label for='lucroReal'>Lucro Real:</label>";
+		labelValor.innerHTML = "<label for='valor'>Lucro Real:</label>";
 	if (pessoaFisica == true)
-		labellucroReal.innerHTML = "<label for='lucroReal'>Imposto a pagar:</label>";
+		labelValor.innerHTML = "<label for='valor'>Imposto a devido:</label>";
 }
 function verificaValor(){
-	var lucroReal = document.getElementById("lucroReal").value;
-	lucroReal = formataValor(lucroReal);
+	var valor = document.getElementById("valor").value;
+	valor = formataValor(valor);
 	var campoPodeDoar = document.getElementById("campoPodeDoar");
 	var pessoaFisica = document.getElementsByName("tipoPessoa")[1].checked;
 	var pessoaJuridica = document.getElementsByName("tipoPessoa")[0].checked;
@@ -120,7 +217,7 @@ function verificaValor(){
 		porcentagem = 0.04;
 	if (pessoaFisica == true)
 		porcentagem = 0.06;
-	podeDoar = lucroReal*porcentagem;
+	podeDoar = valor*porcentagem;
 	podeDoar = float2moeda(podeDoar);
 	campoPodeDoar.innerHTML = podeDoar;
 }
@@ -141,52 +238,14 @@ function float2moeda(num) {
 		ret = ' - ' + ret;
 	return ret;
 }
-function mascaraMoeda(objTextBox, SeparadorMilesimo, SeparadorDecimal, e){  
-	var key = '';  
-	var i = j = 0;  
-	var len = len2 = 0;  
-	var strCheck = '0123456789';  
-	var aux = aux2 = '';  
-	var whichCode = (window.Event) ? e.which : e.keyCode;  
-	if (whichCode == 13)
+function SomenteNumero(e){
+	var tecla= (window.event)? event.keyCode : e.which;
+	if((tecla>47 && tecla<58) || tecla == 44)
 		return true;
-	if(whichCode == 8){
-		return true;
+	else{
+		if (tecla==8 || tecla==0)
+			return true;
+		else 
+			return false;
 	}
-	key = String.fromCharCode(whichCode); // Valor para o código da Chave  
-	if (strCheck.indexOf(key) == -1)
-		return false; // Chave inválida  
-	len = objTextBox.value.length;  
-	for(i = 0; i < len; i++)  
-		if ((objTextBox.value.charAt(i) != '0') && (objTextBox.value.charAt(i) != SeparadorDecimal))
-			break;  
-	aux = '';  
-	for(; i < len; i++)
-		if (strCheck.indexOf(objTextBox.value.charAt(i))!=-1)
-			aux += objTextBox.value.charAt(i);  
-	aux += key;  
-	len = aux.length;  
-	if (len == 0) 
-		objTextBox.value = '';  
-	if (len == 1) 
-		objTextBox.value = '0'+ SeparadorDecimal + '0' + aux;  
-	if (len == 2) 
-		objTextBox.value = '0'+ SeparadorDecimal + aux;  
-	if (len > 2) {  
-		aux2 = '';  
-		for (j = 0, i = len - 3; i >= 0; i--) {  
-			if (j == 3) {  
-				aux2 += SeparadorMilesimo;  
-				j = 0;  
-			}  
-			aux2 += aux.charAt(i);  
-			j++;  
-		}  
-		objTextBox.value = '';  
-		len2 = aux2.length;  
-		for (i = len2 - 1; i >= 0; i--)  
-			objTextBox.value += aux2.charAt(i);  
-		objTextBox.value += SeparadorDecimal + aux.substr(len - 2, len);  
-	}
-	return false;
 }

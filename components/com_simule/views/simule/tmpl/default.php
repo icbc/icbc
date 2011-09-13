@@ -10,12 +10,12 @@
 			</div>
 			<br />
 		</div>
-		<div id="linhaLucroReal">
-			<div class="chave" id="labellucroReal">
-				<label for="lucroReal">Lucro Real:</label>
+		<div id="linhaValor">
+			<div class="chave" id="labelValor">
+				<label for="labelValor">Lucro Real:</label>
 			</div>
-			<div class="campo">
-				<input type="text" class="medio" id="lucroReal" name="lucroReal" maxlenght="150" value="" onblur="verificaValor();" />
+			<div class="campo" id="campoValor">
+				<input type="text" class="medio" id="valor" name="valor" maxlenght="150" value="" onblur="verificaValor(); simula('simples');" onfocus="this.select();" onkeypress="return SomenteNumero(event);" />
 			</div>
 			<br />
 		</div>
@@ -41,8 +41,8 @@
 			<div class="chave" id="labePatrocinio">
 				<label for="doacao">Patrocínio:</label>
 			</div>
-			<div class="campo" id="doacao">
-				<input type="text" class="medio" id="patrocinio" name="patrocinio" maxlenght="150" value="" />
+			<div class="campo" id="campoPatrocinio">
+				<input type="text" class="medio" id="patrocinio" name="patrocinio" maxlenght="150" value="" onblur="simula('simples');" onkeypress="return SomenteNumero(event);" />
 			</div>
 			<br />
 		</div>
@@ -106,7 +106,7 @@
 			<button type="button" name="task" valeu="simuleCompleta" id="simuleCompleta" onclick="simula('completa'); verificaValor();">Detalhada</button>
 		</div>
 		<input type="hidden" id="csll" name="csll" />
-		<input type="hidden" id="lucroReal" name="lucroReal" />
+		<input type="hidden" id="valor" name="valor" />
 		<input type="hidden" id="ImpostoRenda" name="ImpostoRenda" />
 		<input type="hidden" id="adicionalImpostoRenda" name="adicionalImpostoRenda" />
 		<input type="hidden" id="deducaoRuanet" name="deducaoRuanet" />
