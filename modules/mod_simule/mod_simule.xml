@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="module" version="1.5.0">
+	<name>Módulo : Simulador de Doação ao incentivo a cultura </name>
+	<author>Lucas Emmanoel Araujo Machado</author>
+	<creationDate>14/07/2011</creationDate>
+	<copyright>Todos os direitos reservados ao ICBC</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail>lucasemmanoel@gmail.com</authorEmail>
+	<authorUrl>www.lucasemmanoel.com.br</authorUrl>
+	<version>1.0</version>
+	<description>Sistema simulador de formas de patrocínios</description>
+	<files> 
+		<filename module="mod_simule">mod_simule.php</filename>
+	</files>
+	<params>
+		
+	</params>
+</install>
