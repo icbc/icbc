@@ -75,15 +75,15 @@
 		</div>
 		<div id="linhaIRPagar" style="display: none;">
 			<div class="chave" id="labelIRPagar">
-				<label for="doacao">Imposto de Renda a Pagar:</label>
+				<label for="doacao">IR a Pagar:</label>
 			</div>
 			<div class="campo" id="campoIRPagar">
 
 			</div>
 			<br />
 		</div>
-		<div id="linhaCsll">
-			<div class="chave" id="labelTipoPessoa">
+		<div id="linhaTotalImposto">
+			<div class="chave" id="labelTotalImposto">
 				<label for="doacao">Total dos impostos:</label>
 			</div>
 			<div class="campo" id="campoTotalImposto">
