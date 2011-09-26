@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+
+	<name>Content - Auto Read More</name>
+	<author>www.toao.net</author>
+	<creationDate>May 2009</creationDate>
+	<copyright>Copyright (C) 2009 www.toao.net. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.toao.net/</authorUrl>
+	<version>1.3 Beta</version>
+	<description>THANK_YOU_FOR_USING_AUTO_READ_MORE</description>
+	<files>
+		<filename plugin="AutoReadMore">AutoReadMore.php</filename>
+	</files>
+	
+	<params>	
+	  <param name="Leading_Max_Chars" type="text" default="750" label="LEADING_MAX_CHARS_LABEL" description="LEADING_MAX_CHARS_DESC"/>
+	  <param name="Max_Chars" type="text" default="500" label="MAX_CHARS_LABEL" description="MAX_CHARS_DESC"/>
+      <param name="Ignore_Existing_Read_More" type="radio" default="0" label="IGNORE_EXISTING_LABEL" description="IGNORE_EXISTING_DESC">
+         <option value="1">YES</option>
+         <option value="0">NO</option>
+      </param>	  
+      <param name="Thumbnails" type="text" default="0" label="THUMBNAILS_LABEL" description="THUMBNAILS_DESC" />
+	  <param name="Thumbnails_Class" type="text" default="" label="THUMBNAILS_CLASS_LABEL" description="THUMBNAILS_CLASS_DESC" />
+      <param name="Strip_Formatting" type="radio" default="0" label="STRIP_FORMATTING_LABEL" description="STRIP_FORMATTING_DESC">
+         <option value="1">YES</option>
+         <option value="0">NO</option>
+      </param>
+      <param name="Enabled_Front_Page" type="radio" default="1" label="ENABLED_FRONT_PAGE_LABEL" description="ENABLED_FRONT_PAGE_DESC">
+         <option value="1">YES</option>
+         <option value="0">NO</option>
+      </param>
+      <param name="Exclude_Article_Ids" type="text" default="" label="EXCLUDE_ARTICLE_IDS_LABEL" description="EXCLUDE_ARTICLE_IDS_DESC"/>
+      <param name="Exclude_Category_Ids" type="text" default="" label="EXCLUDE_CATEGORY_IDS_LABEL" description="EXCLUDE_CATEGORY_IDS_DESC"/>
+      <param name="Exclude_Section_Ids" type="text" default="" label="EXCLUDE_SECTION_IDS_LABEL" description="EXCLUDE_SECTION_IDS_DESC"/>
+	  <param name="Developer_Mode" type="radio" default="0" label="DEVELOPER_MODE_LABEL" description="DEVELOPER_MODE_DESC">
+         <option value="1">YES</option>
+         <option value="0">NO</option>
+      </param>
+	</params>
+
+	<languages folder="language">
+	  <language tag="en-GB">en-GB.plg_content_AutoReadMore.ini</language>
+	  <language tag="es-ES">es-ES.plg_content_AutoReadMore.ini</language>
+	  <language tag="PT-Br">PT-Br.plg_content_AutoReadMore.ini</language>
+   </languages>
+   
+</install>

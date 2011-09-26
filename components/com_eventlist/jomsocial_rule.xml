@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jomsocial>
+     <component>com_eventlist</component>
+     <rules>
+       <rule>
+        <name>Add event</name>
+        <description>Give points when registered user add new event.</description>
+        <action_string>eventlist.event.add</action_string>
+        <publish>true</publish>
+        <points>1</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Edit event</name>
+        <description>Give points when registered user edited an event.</description>
+        <action_string>eventlist.event.edit</action_string>
+        <publish>true</publish>
+        <points>0</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Add venue</name>
+        <description>Give points when registered user add new venue.</description>
+        <action_string>eventlist.venue.add</action_string>
+        <publish>true</publish>
+        <points>1</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Edit venue</name>
+        <description>Give points when registered user edited a venue.</description>
+        <action_string>eventlist.venue.edit</action_string>
+        <publish>true</publish>
+        <points>0</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Register to an event</name>
+        <description>Give points when registered user registered to an event.</description>
+        <action_string>eventlist.event.registered</action_string>
+        <publish>true</publish>
+        <points>1</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Unregister from an event</name>
+        <description>Give points when registered user unregistered from an event.</description>
+        <action_string>eventlist.event.unregistered</action_string>
+        <publish>true</publish>
+        <points>-1</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Got registration</name>
+        <description>Give points when a user registered to an event of this user.</description>
+        <action_string>eventlist.event.gotregistration</action_string>
+        <publish>true</publish>
+        <points>1</points>
+        <access_level>1</access_level>       
+       </rule>
+       <rule>
+        <name>Got cancellation</name>
+        <description>Give points when a user unregistered from an event of this user.</description>
+        <action_string>eventlist.event.gotunregistration</action_string>
+        <publish>true</publish>
+        <points>-1</points>
+        <access_level>1</access_level>       
+       </rule>
+     </rules>
+</jomsocial>

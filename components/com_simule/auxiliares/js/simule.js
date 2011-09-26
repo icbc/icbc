@@ -13,7 +13,8 @@ function analisePF(valor, patrocinio){
 	var campoValor = document.getElementById("campoValor");
 	var campoPatrocinio = document.getElementById("campoPatrocinio");
 	var campoDeducao = document.getElementById("campoDeducao");
-	var campoIRPagar = document.getElementById("campoIRPagar");
+	var campoTotalImposto = document.getElementById("campoTotalImposto");
+	
 	var linhaCsll = document.getElementById("linhaCsll");
 	var linhaIR = document.getElementById("linhaIR");
 	var linhaAddIR = document.getElementById("linhaAddIR");
@@ -35,14 +36,14 @@ function analisePF(valor, patrocinio){
 	IRPagar = float2moeda(IRPagar);
 	
 	campoDeducao.innerHTML = deducao;
-	campoIRPagar.innerHTML = IRPagar;
+	campoTotalImposto.innerHTML = IRPagar;
 
 	linhaCsll.style.display = "none";
 	linhaIR.style.display = "none";
 	linhaAddIR.style.display = "none";
-	linhaIRPagar.style.display = "";
+	linhaIRPagar.style.display = "none";
 	linhaLucroLiquido.style.display = "none";
-	linhaTotalImposto.style.display = "none";
+	linhaTotalImposto.style.display = "";
 
 	campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
 	campoPatrocinio.innerHTML = "<input type=\"text\" class=\"medio\" id=\"patrocinio\" name=\"patrocinio\" maxlenght=\"150\" value=\""+patrocinio+"\" onblur=\"simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
@@ -67,27 +68,26 @@ function analisePJ(valor, patrocinio, tipo){
 	var linhaCsll = document.getElementById("linhaCsll");
 	var linhaIR = document.getElementById("linhaIR");
 	var linhaAddIR = document.getElementById("linhaAddIR");
-	var linhaIRPagar = document.getElementById("linhaIRPagar");
 	var linhaLucroLiquido = document.getElementById("linhaLucroLiquido");
 	
 	var botoes = document.getElementById("botoes");
 	
 	csll = valor*0.09;
-	if(deducao != ""){
-		if(deducao > valor*0.04){
-			deducao = valor*0.04;
-		}
-	}
-	else{
-		deducao = 0;
-	}
 	ir = valor*0.15;
 	addIR = (valor-240000)*0.1;
 	if(addIR < 0){
 		addIR = 0;
 	}
-	IRPagar = (ir + addIR) - deducao;
-	totalImpostos = IRPagar + csll;
+	IRPagar = (ir + addIR);
+	if(deducao != ""){
+		if(deducao > IRPagar*0.04){
+			deducao = IRPagar*0.04;
+		}
+	}
+	else{
+		deducao = 0;
+	}
+	totalImpostos = IRPagar + csll - deducao;
 	lucroLiquido = valor - totalImpostos - deducao;
 	
 	csll = float2moeda(csll);
@@ -99,14 +99,13 @@ function analisePJ(valor, patrocinio, tipo){
 	lucroLiquido = float2moeda(lucroLiquido);
 	
 	if(tipo == "simples"){
-		campoIRPagar.innerHTMl = IRPagar;
+		campoIRPagar.innerHTML = IRPagar;
 		campoDeducao.innerHTML = deducao;
 		campoTotalImposto.innerHTML = totalImpostos;
 		
 		linhaCsll.style.display = "none";
 		linhaIR.style.display = "none";
 		linhaAddIR.style.display = "none";
-		linhaIRPagar.style.display = "none";
 		linhaLucroLiquido.style.display = "none";
 		
 		campoValor.innerHTML = "<input type=\"text\" class=\"medio\" id=\"valor\" name=\"valor\" maxlenght=\"150\" value=\""+valor+"\" onblur=\"verificaValor(); simula('simples');\" onfocus=\"this.select();\" onkeypress=\"return SomenteNumero(event);\" />";
@@ -118,7 +117,7 @@ function analisePJ(valor, patrocinio, tipo){
 		botoes.innerHTML = botao;
 	}
 	if(tipo == "completa"){
-		campoIRPagar.innerHTMl = IRPagar;
+		campoIRPagar.innerHTML = IRPagar;
 		campoCsll.innerHTML = csll;
 		campoIR.innerHTML = ir;
 		campoAddIR.innerHTML = addIR;
@@ -138,7 +137,6 @@ function analisePJ(valor, patrocinio, tipo){
 		linhaCsll.style.display = "";
 		linhaIR.style.display = "";
 		linhaAddIR.style.display = "";
-		linhaIRPagar.style.display = "";
 		linhaLucroLiquido.style.display = "";
 	}
 }
@@ -171,7 +169,7 @@ function validaTipoPessoa(){
 		linhaCsll.style.display = "none";
 		linhaIR.style.display = "none";
 		linhaAddIR.style.display = "none";
-		linhaIRPagar.style.display = "none";
+		linhaIRPagar.style.display = "";
 		linhaLucroLiquido.style.display = "none";
 		linhaTotalImposto.style.display = "";
 		
@@ -185,9 +183,9 @@ function validaTipoPessoa(){
 		linhaCsll.style.display = "none";
 		linhaIR.style.display = "none";
 		linhaAddIR.style.display = "none";
-		linhaIRPagar.style.display = "";
+		linhaIRPagar.style.display = "none";
 		linhaLucroLiquido.style.display = "none";
-		linhaTotalImposto.style.display = "none";
+		linhaTotalImposto.style.display = "";
 		botao = "<button type=\"button\" name=\"task\" valeu=\"simuleCompleta\" id=\"simuleCompleta\" onclick=\"simula('simples');verificaValor();\">Simule</button>";
 		botoes.innerHTML = botao;
 		
@@ -199,11 +197,18 @@ function verificaValor(){
 	var campoPodeDoar = document.getElementById("campoPodeDoar");
 	var pessoaFisica = document.getElementsByName("tipoPessoa")[1].checked;
 	var pessoaJuridica = document.getElementsByName("tipoPessoa")[0].checked;
-	if(pessoaJuridica == true)
-		porcentagem = 0.04;
-	if (pessoaFisica == true)
-		porcentagem = 0.06;
-	podeDoar = valor*porcentagem;
+	if(pessoaJuridica == true){
+		ir = valor*0.15;
+		addIR = (valor-240000)*0.1;
+		if(addIR < 0){
+			addIR = 0;
+		}
+		IRPagar = (ir + addIR);
+		podeDoar = IRPagar *0.04;
+	}
+	if (pessoaFisica == true){
+		podeDoar = valor*0.06;
+	}
 	podeDoar = float2moeda(podeDoar);
 	campoPodeDoar.innerHTML = podeDoar;
 }

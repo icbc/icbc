@@ -1,0 +1,92 @@
+<?xml version ="1.0" encoding="utf-8"?>
+
+<install type="plugin" version="1.5" group="content" method="upgrade">
+  <name>Content - Read Less - Text</name>
+  <version>3.0</version>
+  <description>READ_LESS_TEXT_DESCRIPTION</description>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL GPLv3</license>
+  <author>parvus</author>
+  <authoremail>parvus@operamail.com</authoremail>
+  <authorurl>http://joomlacode.org/gf/project/readless/</authorurl>
+  <copyright>Copyright (C) 2010. All rights reserved.</copyright>
+  <creationDate>May 2010</creationDate>
+  
+  <files>
+    <filename plugin="readlesstext">readlesstext.php</filename>
+  </files>
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB.plg_content_readlesstext.ini</language>
+    <language tag="nl-NL">nl-NL.plg_content_readlesstext.ini</language>
+  </languages>
+  
+  <params>
+    <param name="minimumTextLength" type="text" default="70" label="MINIMUM_TEXT_LENGTH" description="MINIMUM_TEXT_LENGTH_DESCRIPTION"></param>
+    <param name="cutOffTextLength" type="text" default="50" label="CUT_OFF_TEXT_LENGTH" description="CUT_OFF_TEXT_LENGTH_DESCRIPTION"></param>
+    <param name="cutOffTextAtWordBoundary" type="radio" default="0" label="CUT_OFF_TEXT_AT_WORD_BOUNDARY" description="CUT_OFF_TEXT_AT_WORD_BOUNDARY_DESCRIPTION">
+      <option value="1">YES</option>
+      <option value="0">NO</option>
+    </param>
+    <param name="respectExistingReadmoreLink" type="radio" default="1" label="RESPECT_EXISTING_READMORE_LINK" description="RESPECT_EXISTING_READMORE_LINK_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    
+    <param name="extraSelfClosingTags" type="text" default="p, br, hr, img" label="EXTRA_SELF_CLOSING_TAGS" description="EXTRA_SELF_CLOSING_TAGS_DESCRIPTION" />
+    <param name="tagsToRemove" type="text" default="img" label="TAGS_TO_REMOVE" description="TAGS_TO_REMOVE_DESCRIPTION" />
+    <param name="tagsToRemoveWithContents" type="text" default="" label="TAGS_TO_REMOVE_WITH_CONTENTS" description="TAGS_TO_REMOVE_WITH_CONTENTS_DESCRIPTION" />
+    
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+  
+    <param name="popImage" type="radio" default="1" label="POP_IMAGE" description="POP_IMAGE_DESCRIPTION">
+      <option value="0">NO</option>
+      <option value="1">YES</option>
+    </param>
+    <param name="minimumImageWidth" type="text" default="32" label="MINIMUM_IMAGE_WIDTH" description="MINIMUM_IMAGE_WIDTH_DESCRIPTION" />
+    <param name="minimumImageHeight" type="text" default="32" label="MINIMUM_IMAGE_HEIGHT" description="MINIMUM_IMAGE_HEIGHT_DESCRIPTION" />
+    <param name="minimumImageRatio" type="text" default="0.10" label="MINIMUM_IMAGE_RATIO" description="MINIMUM_IMAGE_RATIO_DESCRIPTION" />
+    
+    <param name="thumbWidth" type="text" default="0" label="THUMB_WIDTH" description="THUMB_WIDTH_DESCRIPTION" />
+    <param name="thumbHeight" type="text" default="0" label="THUMB_HEIGHT" description="THUMB_HEIGHT_DESCRIPTION" />
+    <param name="thumbPosition" type="list" default="left" label="THUMB_POSITION" description="THUMB_POSITION_DESCRIPTION">
+      <option value="left">UPPER_LEFT</option>
+      <option value="right">UPPER_RIGHT</option>
+    </param>
+    <param name="imageMargin" type="text" default="3" label="IMAGE_MARGIN" description="IMAGE_MARGIN_DESCRIPTION" />
+    <param name="imageBorderWidth" type="text" default="1" label="THUMB_BORDER_WIDTH" description="THUMB_BORDER_WIDTH_DESCRIPTION" />
+    <param name="imageBorderColor" type="text" default="#cccccc" label="THUMB_BORDER_COLOR" description="THUMB_BORDER_COLOR_DESCRIPTION" />
+    <param name="imageClass" type="text" default="" label="THUMB_CLASS" description="THUMB_CLASS_DESCRIPTION" />
+    
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+
+    <param name="userPrefix" type="text" default="" label="USER_PREFIX" description="USER_PREFIX_DESCRIPTION"></param>
+    <param name="guestPrefix" type="text" default="" label="GUEST_PREFIX" description="GUEST_PREFIX_DESCRIPTION"></param>
+    <param name="userSuffix" type="text" default="" label="USER_SUFFIX" description="USER_SUFFIX_DESCRIPTION"></param>
+    <param name="guestSuffix" type="text" default="" label="GUEST_SUFFIX" description="GUEST_SUFFIX_DESCRIPTION"></param>
+    <param name="dateFormat" type="text" default="[%m/%d]" label="DATE_FORMAT" description="DATE_FORMAT_DESCRIPTION"></param>
+      
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+
+    <param name="alwaysActiveForGuests" type="radio" default="0" label="ALWAYS_ACTIVE_FOR_GUESTS" description="ALWAYS_ACTIVE_FOR_GUESTS_DESCRIPTION">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+        
+    <param name="when" type="radio" default="0" label="WHEN" description="WHEN_DESCRIPTION">
+      <option value="0">COMMON_USAGE</option>
+      <option value="1">SPECIFIC_USAGE</option>
+    </param>
+    <param name="allowed" type="text" default="" label="ALLOWED" description="ALLOWED_DESCRIPTION"></param>
+    <param name="disallowed" type="text" default="" label="DISALLOWED" description="DISALLOWED_DESCRIPTION"></param>
+    
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    
+    <param name="discover" type="radio" default="0" label="DISCOVER" description="DISCOVER_DESCRIPTION">
+      <option value="1">YES</option>
+      <option value="0">NO</option>
+    </param>    
+  </params>
+    
+</install>

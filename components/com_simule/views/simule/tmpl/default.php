@@ -19,6 +19,15 @@
 			</div>
 			<br />
 		</div>
+		<div id="linhaIRPagar">
+			<div class="chave" id="labelIRPagar">
+				<label for="doacao">IR a Pagar:</label>
+			</div>
+			<div class="campo" id="campoIRPagar">
+
+			</div>
+			<br />
+		</div>
 		<div id="linhaPatrocinioSugerido">
 			<div class="chave" id="labelTipoPessoa">
 				<label for="doacao">Patrocínio sugerido:</label>
@@ -69,15 +78,6 @@
 				<label for="doacao">Lei Rouanet - Dedução:</label>
 			</div>
 			<div class="campo" id="campoDeducao">
-
-			</div>
-			<br />
-		</div>
-		<div id="linhaIRPagar" style="display: none;">
-			<div class="chave" id="labelIRPagar">
-				<label for="doacao">IR a Pagar:</label>
-			</div>
-			<div class="campo" id="campoIRPagar">
 
 			</div>
 			<br />
