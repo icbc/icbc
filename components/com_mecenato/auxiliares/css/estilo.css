@@ -1,0 +1,15 @@
+#componente{
+	width: 100%;
+}
+.chave{
+	float: left;
+	width: 200px;
+	text-align: right;
+	margin-right: 10px;
+}
+.linha{
+	margin-bottom: 10px;
+}
+.botao{
+	text-align: center;
+}
