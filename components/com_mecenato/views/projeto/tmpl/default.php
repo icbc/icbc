@@ -63,8 +63,8 @@
 				<label>Data Publicação da portaria de aprovação no DOU:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="dataPublicacao" id="dataPublicacao" value="<?php echo date("d/m/Y") ?>"/>
-				<img alt="calendario" id="dataPublicacaoImg" src="components/com_mecenato/auxiliares/imagens/calendar.png" />
+				<input class="inputbox" style="float:left;" type="text" name="dataPublicacao" id="dataPublicacao" value="<?php echo date("d/m/Y") ?>"/>
+				<img alt="calendario" style="float:left;" id="dataPublicacaoImg" src="components/com_mecenato/auxiliares/imagens/calendar.png" />
 				<script type ="text/javascript">
 				Calendar.setup(
 					{
