@@ -1,4 +1,12 @@
 <?php defined("_JEXEC") or die("Acesso Restrito."); JHTML::_("behavior.modal"); ?>
+<script type="text/javascript">
+	jQuery(function($){
+	   $("#documento").mask("999.999.999-99");
+	   $("#telefone1").mask("(99)9999-9999");
+	   $("#telefone2").mask("(99)9999-9999");
+	   $("#telefone3").mask("(99)9999-9999");
+	});
+</script>
 <div id="componente">
 	<div class="itemObrigatorio">
 		* Itens obrigatórios
