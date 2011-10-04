@@ -9,6 +9,7 @@ class MecenatoFrontControllerProponente extends MecenatoFrontController{
 		$objUri->toString();
 		$modelo = $this->getModel("proponente");
 		$modelo->post = JRequest::get("post");
+		echo JUtility::dump($modelo->post);
 		$modelo->tabela = "proponente";
 		$modelo->armazena();
 	}

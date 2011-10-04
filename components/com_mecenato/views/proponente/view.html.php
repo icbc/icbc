@@ -10,9 +10,10 @@ class MecenatoFrontViewProponente extends JView {
 		$documento->addStyleSheet("components/com_mecenato/auxiliares/css/estilo.css");
 		$documento->addScript("components/com_mecenato/auxiliares/js/jquery.min.js");
 		$documento->addScript("components/com_mecenato/auxiliares/js/jquery.maskedinput.min.js");
-		$arrTipoDocumento[] = JHTML::_("select.option","cpf","CPF");
-		$arrTipoDocumento[] = JHTML::_("select.option","cnpj", "CNPJ");
-		$selectTipoDocumento = JHTML::_("select.genericlist",$arrTipoDocumento, "tipoDocumento", "class='inputbox'");
+		$documento->addScript("components/com_mecenato/auxiliares/js/javascript.js");
+		$arrTipoDocumento[] = JHTML::_("select.option","0","CPF");
+		$arrTipoDocumento[] = JHTML::_("select.option","1", "CNPJ");
+		$selectTipoDocumento = JHTML::_("select.radiolist",$arrTipoDocumento, "tipoDocumento", "class='inputbox' onClick='verificaTipoDocumento();'");
 		$this->assignRef("tipoDocumento", $selectTipoDocumento);
 		$this->assignRef("selectEstado", $selectEstado);
 		$this->assignRef("url", JRequest::getVar("REQUEST_URI", null,"server"));

@@ -1,7 +1,8 @@
 <?php defined("_JEXEC") or die("Acesso Restrito."); JHTML::_("behavior.modal"); ?>
 <script type="text/javascript">
 	jQuery(function($){
-	   $("#documento").mask("999.999.999-99");
+	   $("#documentocnpj").mask("99.999.999/9999-99");
+	   $("#documentocpf").mask("999.999.999-99");
 	   $("#telefone1").mask("(99)9999-9999");
 	   $("#telefone2").mask("(99)9999-9999");
 	   $("#telefone3").mask("(99)9999-9999");
@@ -30,12 +31,21 @@
 			</div>
 			<div class="clear separador"></div>
 		</div>
-		<div class="linha">
+		<div class="linha" id="linhaDocumentocpf" style="display:none;">
+			<div class="chave">
+				<label>CPF:</label>
+			</div>
+			<div class="campo">
+				<input class="inputbox" type="text" name="documento" id="documentocpf" value="" />
+			</div>
+			<div class="clear separador"></div>
+		</div>
+		<div class="linha" id="linhaDocumentocnpj" style="display:none;">
 			<div class="chave">
 				<label>CNPJ:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="documento" id="documento" value="" />
+				<input class="inputbox" type="text" name="documento" id="documentocnpj" value="" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -134,7 +144,7 @@
 				<label>Senha:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="password" />
+				<input class="inputbox" type="password" name="password" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -143,7 +153,7 @@
 				<label>Confirmar senha:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="password2" />
+				<input class="inputbox" type="password" name="password2" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
