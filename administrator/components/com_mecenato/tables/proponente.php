@@ -1,6 +1,5 @@
 <?php
 defined("_JEXEC") or die ("Acesso Restrito");
-
 class TableProponente  extends JTable{
 	public $id = null;
 	public $idUser = null;
@@ -12,7 +11,7 @@ class TableProponente  extends JTable{
 	public $estado = null;
 	public $cep = null;
 	public function __construct(&$db) {
-		parent::__construct("#__mecenato_proponente", $key, $db);
+		parent::__construct("#__mecenato_proponente", "id", $db);
 	}
 }
 

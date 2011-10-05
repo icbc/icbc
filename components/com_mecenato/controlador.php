@@ -11,6 +11,8 @@ class MecenatoFrontController extends JController {
 		JRequest::setVar("view",$view);
 		parent::display();
 	}
+	abstract function salvar(){
+	}
 }
 
 ?>

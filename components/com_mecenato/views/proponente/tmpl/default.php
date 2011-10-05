@@ -36,7 +36,7 @@
 				<label>CPF:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="documento" id="documentocpf" value="" />
+				<input class="inputbox" type="text" name="documento[]" id="documentocpf" value="" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -45,7 +45,7 @@
 				<label>CNPJ:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="documento" id="documentocnpj" value="" />
+				<input class="inputbox" type="text" name="documento[]" id="documentocnpj" value="" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
