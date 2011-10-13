@@ -15,7 +15,7 @@ jimport("joomla.application.component.view");
 class MecenatoFrontViewProjeto extends JView {
 	function display($tpl = null){
 		$objDoc =& JFactory::getDocument();
-		$objDoc->addStyleSheet("components/com_mecenato/auxiliares/css/estilo.css");
+		$objDoc->addStyleSheet("components/com_mecenato/auxiliares/css/estilo.css");		
 		parent::display();
 	}
 }

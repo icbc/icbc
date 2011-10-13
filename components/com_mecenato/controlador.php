@@ -1,9 +1,5 @@
 <?php
-/**
- * Description of controlador
- *
- * @author icbc
- */
+defined("_JEXEC") or die ("Acesso Restrito");
 jimport("joomla.application.component.controller");
 class MecenatoFrontController extends JController {
 	public function projeto(){
@@ -11,7 +7,7 @@ class MecenatoFrontController extends JController {
 		JRequest::setVar("view",$view);
 		parent::display();
 	}
-	abstract function salvar(){
+	function salvar(){
 	}
 }
 

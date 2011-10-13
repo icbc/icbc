@@ -59,8 +59,10 @@ class Modelo extends JModel {
 			}
 		}
 	}
-	public function gravaArquito(){
-		$this->file;
+	public function gravaArquivo(){
+		echo JUtility::dump($this->file);
+		$arrArquivo = array_reverse(explode(".",$this->file["name"]));
+		$this->post["logo"] = $this->post["numPronac"].".".$arrArquivo[0];
 	}
 }
 

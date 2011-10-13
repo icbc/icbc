@@ -3,9 +3,9 @@
 	<div class="itemObrigatorio">
 		* Itens obrigatórios
 	</div>
-	<form action="index.php?option=com_mecenato" >
+	<form action="index.php?option=com_mecenato" method="post" enctype="multipart/form-data" >
 		<div class="linha">
-		<div class="chave">
+			<div class="chave">
 				<label>Número Pronac:</label>
 			</div>
 			<div class="campo">
@@ -27,7 +27,7 @@
 				<label>Nome:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="numPronac" />
+				<input class="inputbox" type="text" name="nome" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -36,7 +36,7 @@
 				<label>Banco:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="numPronac" />
+				<input class="inputbox" type="text" name="banco" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -45,7 +45,7 @@
 				<label>Agencia:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="numPronac" />
+				<input class="inputbox" type="text" name="agencia" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -54,7 +54,7 @@
 				<label>Conta Corrente:</label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="numPronac" />
+				<input class="inputbox" type="text" name="conta" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -89,12 +89,13 @@
 				<label>Logo Projeto:</label>
 			</div>
 			<div class="campo">
-				<input class="file" type="file" name="numPronac" />
+				<input class="file" type="file" name="logo" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
 		<div class="botao">
 			<button type="submit" name="task" value="salvar" > Envair </button>
 		</div>
+		<input type="hidden" name="controller" value="projeto" />
 	</form>
 </div>
