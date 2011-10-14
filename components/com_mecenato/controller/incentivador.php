@@ -1,6 +1,6 @@
 <?php
 defined("_JEXEC") or die("Acesso Restrito");
-class MecenatoFrontControllerProponente extends MecenatoFrontController{
+class MecenatoFrontControllerIncentivador extends MecenatoFrontController{
 	private $get;
 	private $link = "index.php";
 	function salvar(){
@@ -13,7 +13,7 @@ class MecenatoFrontControllerProponente extends MecenatoFrontController{
 		$post["documento"] = $post["documento"][$post["tipoDocumento"]];
 		$modelo->post = $post;
 		$modelo->armazenaJUser();
-		$modelo->tabela = "proponente";
+		$modelo->tabela = "incentivador";
 		$objProponente = $modelo->armazena();
 		$postTelefone = $post["telefone"];
 		foreach( $postTelefone as $telefone ){
@@ -29,5 +29,3 @@ class MecenatoFrontControllerProponente extends MecenatoFrontController{
 		$this->setRedirect($this->link, "Cadastros realizado com sucesso");
 	}
 }
-
-?>

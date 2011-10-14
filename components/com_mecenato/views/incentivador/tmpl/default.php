@@ -50,6 +50,33 @@
 			</div>
 			<div class="clear separador"></div>
 		</div>
+		<div class="linha" id="linhaTipoEmpresa" style="display:none;">
+			<div class="chave">
+				<label>Tipo de Empresa:</label>
+			</div>
+			<div class="campo">
+				<?php echo $this->tipoEmpresa; ?>
+			</div>
+			<div class="clear separador"></div>
+		</div>
+		<div class="linha" id="linhaGrupoEmpresarial" style="display:none;">
+			<div class="chave">
+				<label>Grupo Empresarial:</label>
+			</div>
+			<div class="campo">
+				<input class="inputbox" type="text" name="grupoEmpresarial" id="grupoEmpresarial" value="" />
+			</div>
+			<div class="clear separador"></div>
+		</div>
+		<div class="linha" id="linhaNomeDirigente" style="display:none;">
+			<div class="chave">
+				<label>Nome Dirigente:</label>
+			</div>
+			<div class="campo">
+				<input class="inputbox" type="text" name="nomeDirigente" id="nomeDirigente" value="" />
+			</div>
+			<div class="clear separador"></div>
+		</div>
 		<div class="linha">
 			<div class="chave">
 				<label>Endereço:</label>
@@ -161,6 +188,6 @@
 		<div class="botao">
 			<button type="submit" name="task" value="salvar" > Envair </button>
 		</div>
-		<input type="hidden" name="controller" value="proponente" />
+		<input type="hidden" name="controller" value="incentivador" />
 	</form>
 </div>

@@ -5,7 +5,7 @@ $controlador = JRequest::getCmd("controller", null);
 if($controlador != null){
 	require_once (JPATH_COMPONENT.DS."controller".DS."{$controlador}.php");
 }
-$tarefa = JRequest::getCmd("task","projeto");
+$tarefa = JRequest::getCmd("task","visao");
 $nomeClasse = MecenatoFrontController.$controlador;
 $objControlador = new $nomeClasse();
 $objControlador->execute($tarefa);

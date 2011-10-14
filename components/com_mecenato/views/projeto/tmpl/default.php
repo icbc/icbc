@@ -3,7 +3,7 @@
 	<div class="itemObrigatorio">
 		* Itens obrigatórios
 	</div>
-	<form action="index.php?option=com_mecenato" method="post" enctype="multipart/form-data" >
+	<form action="<?php echo $this->url ?>" method="post" enctype="multipart/form-data" >
 		<div class="linha">
 			<div class="chave">
 				<label>Número Pronac:</label>

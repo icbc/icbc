@@ -1,11 +1,15 @@
 <?php
+defined("_JEXEC") or die("Acesso Restrito");
 jimport("joomla.application.component.model");
+jimport("joomla.filesystem.folder");
+jimport("joomla.filesystem.file");
 class Modelo extends JModel {
 	private $idUser;
 	private $dados;
 	private $tabela;
 	private $post;
 	private $file;
+	private $dir = "components/com_mecenato/auxiliares/arquivos/";
 	public function __get($name) {
 		return $this->$name;
 	}
@@ -14,6 +18,8 @@ class Modelo extends JModel {
 	}
 	public function armazena(){
 		$tabela = $this->getTable($this->tabela);
+		$this->post["dataHoraCad"] = date("Y-m-d H:i:s");
+		echo JUtility::dump($this->post);
 		if($tabela->save($this->post)){
 			return $tabela;
 		}
@@ -39,7 +45,6 @@ class Modelo extends JModel {
 		if($this->post["idUser"] != 0 || $this->post["idUser"] != null){
 			$user->set("id",$this->post["idUser"]);
 			if($user->save(true)){
-				echo JUtility::dump($user);
 				return true;
 			}
 			else{
@@ -60,9 +65,34 @@ class Modelo extends JModel {
 		}
 	}
 	public function gravaArquivo(){
-		echo JUtility::dump($this->file);
 		$arrArquivo = array_reverse(explode(".",$this->file["name"]));
-		$this->post["logo"] = $this->post["numPronac"].".".$arrArquivo[0];
+		if($this->file["error"] == 0){
+			$this->file["name"] = "{$this->post["numPronac"]}.{$arrArquivo[0]}";
+			$diretorio = JPATH_SITE.DS.$this->dir;
+			$path = JFolder::exists($diretorio);
+			if($path){
+				$src = $this->file["tmp_name"];
+				$destino = $diretorio.$this->file["name"];
+				$file = JFile::upload($src, $destino);
+				if($file)
+					return true;
+				else{
+					$modelo->setError("Erro ao gravar o arquivo: {$this->getError()}");
+					return false;
+				}
+			}
+		}
+	}
+	public function organizaData($arrayCampos, $formato = "banco"){
+		foreach($this->post as $chave => $valor){
+			foreach($arrayCampos as $campo){
+				if($chave == $campo)
+					if($formato == "brasil")
+						$this->post[$chave] = implode("/",  array_reverse(explode("-", $valor)));
+					if($formato == "banco")
+						$this->post[$chave] = implode("-",  array_reverse(explode("/", $valor)));
+			}
+		}
 	}
 }
 

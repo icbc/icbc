@@ -14,10 +14,13 @@ class MecenatoFrontControllerProjeto extends MecenatoFrontController{
 		$modelo->post = $post;
 		$file = JRequest::getVar("logo", null, "FILES");
 		$modelo->file = $file;
-		$modelo->tabela = "projeto";
 		$modelo->gravaArquivo();
-		die(JUtility::dump($modelo));
-		$objProponente = $modelo->armazena();
+		$modelo->tabela = "projeto";
+		$post["logo"] = $modelo->file["name"];
+		$modelo->post = $post;
+		$arrayCampos = array("dataPublicacao");
+		$modelo->organizaData($arrayCampos);
+		$objProjeto = $modelo->armazena();
 		$this->setRedirect($this->link, "Cadastros realizado com sucesso");
 	}
 }
