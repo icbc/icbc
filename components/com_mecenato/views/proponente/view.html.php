@@ -5,6 +5,8 @@ jimport("joomla.application.component.view");
 class MecenatoFrontViewProponente extends JView {
 	function display($tpl = null) {
 		$auxiliar = new Auxiliar();
+		$objUri =& JFactory::getURI();
+		$url = "index.php".$objUri->toString(array('query'));
 		$selectEstado = $auxiliar->selectEstados();
 		$documento =& JFactory::getDocument();
 		$documento->addStyleSheet("components/com_mecenato/auxiliares/css/estilo.css");
@@ -16,7 +18,7 @@ class MecenatoFrontViewProponente extends JView {
 		$selectTipoDocumento = JHTML::_("select.radiolist",$arrTipoDocumento, "tipoDocumento", "class='inputbox' onClick='verificaTipoDocumento();'");
 		$this->assignRef("tipoDocumento", $selectTipoDocumento);
 		$this->assignRef("selectEstado", $selectEstado);
-		$this->assignRef("url", JRequest::getVar("REQUEST_URI", null,"server"));
+		$this->assignRef("url", $url);
 		
 		parent::display($tpl);
 	}

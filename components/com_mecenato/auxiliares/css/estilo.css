@@ -13,3 +13,19 @@
 .botao{
 	text-align: center;
 }
+.formBusca{
+	float: left;
+}
+.novoProjeto{
+	float: right;
+}
+.tabelaProjeto{
+	width: 100%;
+}
+.tabelaProjeto thead{
+	background: #AAA;
+}
+.tabelaProjeto tr{
+	height: 32px;
+	border: 1px solid #000;
+}

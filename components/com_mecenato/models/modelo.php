@@ -5,7 +5,7 @@ jimport("joomla.filesystem.folder");
 jimport("joomla.filesystem.file");
 class Modelo extends JModel {
 	private $idUser;
-	private $dados;
+	protected $dados;
 	private $tabela;
 	private $post;
 	private $file;
@@ -19,7 +19,6 @@ class Modelo extends JModel {
 	public function armazena(){
 		$tabela = $this->getTable($this->tabela);
 		$this->post["dataHoraCad"] = date("Y-m-d H:i:s");
-		echo JUtility::dump($this->post);
 		if($tabela->save($this->post)){
 			return $tabela;
 		}
@@ -83,17 +82,32 @@ class Modelo extends JModel {
 			}
 		}
 	}
-	public function organizaData($arrayCampos, $formato = "banco"){
-		foreach($this->post as $chave => $valor){
-			foreach($arrayCampos as $campo){
-				if($chave == $campo)
-					if($formato == "brasil")
-						$this->post[$chave] = implode("/",  array_reverse(explode("-", $valor)));
-					if($formato == "banco")
+	public function organizaData($arrayCampos, $formato = "gravar"){
+		$i = 0;
+		if($formato == "exibir"){
+			foreach($this->dados as $obj){
+				foreach($obj as $chave => $valor){
+					foreach($arrayCampos as $campo){
+						if($chave == $campo)
+							$this->dados[$i]->$chave = implode("/",  array_reverse(explode("-", $valor)));
+
+					}
+				}
+				$i++;
+			}
+		}
+		if($formato == "gravar"){
+			foreach($this->post as $chave => $valor){
+				foreach($arrayCampos as $campo){
+					if($chave == $campo)
 						$this->post[$chave] = implode("-",  array_reverse(explode("/", $valor)));
+				}
 			}
 		}
 	}
+	protected function getDados($id){
+		$tabela = $this->getTable($this->tabela);
+		$tabela->load();
+		$this->dados = $tabela;
+	}
 }
-
-?>

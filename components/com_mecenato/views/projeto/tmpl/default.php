@@ -1,101 +1,42 @@
-<?php defined("_JEXEC") or die("Acesso Restrito"); JHTML::_('behavior.calendar'); ?>
-<div id="componente">
-	<div class="itemObrigatorio">
-		* Itens obrigatórios
-	</div>
-	<form action="<?php echo $this->url ?>" method="post" enctype="multipart/form-data" >
-		<div class="linha">
-			<div class="chave">
-				<label>Número Pronac:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="numPronac" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Segmento Cultural:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="segmentoCultural" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Nome:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="nome" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Banco:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="banco" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Agencia:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="agencia" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Conta Corrente:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" type="text" name="conta" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Data Publicação da portaria de aprovação no DOU:</label>
-			</div>
-			<div class="campo">
-				<input class="inputbox" style="float:left;" type="text" name="dataPublicacao" id="dataPublicacao" value="<?php echo date("d/m/Y") ?>"/>
-				<img alt="calendario" style="float:left;" id="dataPublicacaoImg" src="components/com_mecenato/auxiliares/imagens/calendar.png" />
-				<script type ="text/javascript">
-				Calendar.setup(
-					{
-						inputField  : "dataPublicacao",
-						ifFormat    : "%d/%m/%Y",
-						button      : "dataPublicacao"
-					}
-				);
-				Calendar.setup(
-					{
-						inputField  : "dataPublicacao",
-						ifFormat    : "%d/%m/%Y",
-						button      : "dataPublicacaoImg"
-					}
-				);
-				</script>
-			</div>
-			<div class="clear separador"></div>
-			</div>
-		<div class="linha">
-			<div class="chave">
-				<label>Logo Projeto:</label>
-			</div>
-			<div class="campo">
-				<input class="file" type="file" name="logo" />
-			</div>
-			<div class="clear separador"></div>
-		</div>
-		<div class="botao">
-			<button type="submit" name="task" value="salvar" > Envair </button>
-		</div>
-		<input type="hidden" name="controller" value="projeto" />
+<?php defined("_JEXEC") or die("Acesso Restrito") ?>
+<div class="formBusca">
+	<form action="<?php echo $this->url["form"];?>" method="post">
+		<label for="busca">PRONAC/Nome: </label>
+		<input type="text" name="busca" id="busca" />
 	</form>
 </div>
+<!-- adicionar verificador que permitira se um determinado usuário tem acesso ou não a esta área -->
+<div class="novoProjeto">
+	<a href="<? echo $this->url["novo"]; ?>">
+		<img alt="Novo Cadastro" src="components/com_mecenato/auxiliares/imagens/novo.png" />
+		<div>
+			Novo
+		</div>
+	</a>
+</div>
+<div class="clear"></div>
+<table class="tabelaProjeto">
+	<thead>
+		<tr>
+			<th width="10%">PRONAC</th>
+			<th width="70%">Nome</th>
+			<th width="20%">Data publicação DOU</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach($this->registros as $obj) : ?>
+		<tr>
+			<td><?php echo $obj->numPronac; ?></td>
+			<td><?php echo $obj->nome; ?></td>
+			<td><?php echo $obj->dataPublicacao; ?></td>
+		</tr>
+		<?php endforeach; ?>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tfoot>
+</table>

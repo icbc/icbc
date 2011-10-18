@@ -27,5 +27,3 @@ class MecenatoFrontViewIncentivador extends JView {
 		parent::display($tpl);
 	}
 }
-
-?>
