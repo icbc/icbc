@@ -24,10 +24,19 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach($this->registros as $obj) : ?>
-		<tr>
-			<td><?php echo $obj->numPronac; ?></td>
-			<td><?php echo $obj->nome; ?></td>
+		<?php $i = 0; 
+		foreach($this->registros as $obj) : ?>
+		<tr class="<?php echo $i%2; ?>">
+			<td>
+				<a class="linkMecenato" href="<?php echo "{$this->url["link"]}&id={$obj->id}" ?>">
+					<?php echo $obj->numPronac; ?>
+				</a>
+			</td>
+			<td>
+				<a class="linkMecenato" href="<?php echo "{$this->url["link"]}&id={$obj->id}" ?>">
+					<?php echo $obj->nome; ?>
+				</a>
+			</td>
 			<td><?php echo $obj->dataPublicacao; ?></td>
 		</tr>
 		<?php endforeach; ?>

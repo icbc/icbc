@@ -5,6 +5,7 @@ jimport("joomla.filesystem.folder");
 jimport("joomla.filesystem.file");
 class Modelo extends JModel {
 	private $idUser;
+	protected $id;
 	protected $dados;
 	private $tabela;
 	private $post;
@@ -104,10 +105,5 @@ class Modelo extends JModel {
 				}
 			}
 		}
-	}
-	protected function getDados($id){
-		$tabela = $this->getTable($this->tabela);
-		$tabela->load();
-		$this->dados = $tabela;
 	}
 }

@@ -7,4 +7,10 @@ class MecenatoFrontModelProjeto extends Modelo {
 		$objDB->setQuery($sql);
 		$this->dados = $objDB->loadObjectList();
 	}
+	public function pegaDado(){
+		$sql = " SELECT * FROM #__mecenato_projeto WHERE id = {$this->id} ";
+		$objDB =& JFactory::getDBO();
+		$objDB->setQuery($sql);
+		$this->dados = $objDB->loadObject();
+	}
 }
