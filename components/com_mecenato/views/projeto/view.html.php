@@ -14,6 +14,7 @@ defined("_JEXEC") or die("Acesso Restrito");
 jimport("joomla.application.component.view");
 class MecenatoFrontViewProjeto extends JView {
 	function display($tpl = null){
+		$modelo =& $this->getModel();
 		$objUri =& JFactory::getURI();
 		$objDoc =& JFactory::getDocument();
 		$objDoc->addStyleSheet("components/com_mecenato/auxiliares/css/estilo.css");
@@ -30,16 +31,17 @@ class MecenatoFrontViewProjeto extends JView {
 			$url = "index.php".$objUri->toString(array('query'));
 			$url = str_replace("view=projeto", "view=patrocinio", $url);
 		}
-		$modelo =& $this->getModel();
-		if($id == null)
+		if($id == null){
 			$modelo->listaDados();
+			$arr = array("dataPublicacao");
+			$modelo->organizaData($arr, "exibir");
+		}
 		else{
 			$modelo->id = $id;
+			$modelo->tabela = "projeto";
 			$modelo->pegaDado();
 			$tpl = "info";
 		}
-		$arr = array("dataPublicacao");
-		$modelo->organizaData($arr, "exibir");
 		$this->assignRef("registros", $modelo->dados);
 		$this->assignRef("url",$url);
 		parent::display($tpl);

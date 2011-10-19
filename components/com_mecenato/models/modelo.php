@@ -6,10 +6,12 @@ jimport("joomla.filesystem.file");
 class Modelo extends JModel {
 	private $idUser;
 	protected $id;
+	protected $campos = "*";
 	protected $dados;
 	private $tabela;
 	private $post;
 	private $file;
+	protected $complemento = "";
 	private $dir = "components/com_mecenato/auxiliares/arquivos/";
 	public function __get($name) {
 		return $this->$name;
@@ -105,5 +107,17 @@ class Modelo extends JModel {
 				}
 			}
 		}
+	}
+	public function listaDados(){
+		$sql = " SELECT {$this->campos} FROM #__mecenato_{$this->tabela} {$this->complemento}";
+		$objDB =& JFactory::getDBO();
+		$objDB->setQuery($sql);
+		$this->dados = $objDB->loadObjectList();
+	}
+	public function pegaDado(){
+		$sql = " SELECT {$this->campos} FROM #__mecenato_{$this->tabela} {$this->complemento} ";
+		$objDB =& JFactory::getDBO();
+		$objDB->setQuery($sql);
+		$this->dados = $objDB->loadObject();
 	}
 }
