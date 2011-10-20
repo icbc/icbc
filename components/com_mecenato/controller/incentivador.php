@@ -2,7 +2,7 @@
 defined("_JEXEC") or die("Acesso Restrito");
 class MecenatoFrontControllerIncentivador extends MecenatoFrontController{
 	private $get;
-	private $link = "index.php";
+	protected $link = "index.php";
 	function salvar(){
 		$this->get = JRequest::get("get");
 		$objUri =& JFactory::getURI();

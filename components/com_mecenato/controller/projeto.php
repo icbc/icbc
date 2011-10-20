@@ -2,7 +2,7 @@
 defined("_JEXEC") or die("Acesso Restrito");
 class MecenatoFrontControllerProjeto extends MecenatoFrontController{
 	private $get;
-	private $link = "index.php";
+	protected $link = "index.php";
 	function salvar(){
 		$this->get = JRequest::get("get");
 		$objUri =& JFactory::getURI();
@@ -10,7 +10,7 @@ class MecenatoFrontControllerProjeto extends MecenatoFrontController{
 		$modelo = $this->getModel("projeto");
 		$post = array();
 		$post = JRequest::get("post");
-		$post["idProponente"] = 2;
+		$post["idProponente"] = 1;
 		$modelo->post = $post;
 		$file = JRequest::getVar("logo", null, "FILES");
 		$modelo->file = $file;
