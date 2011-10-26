@@ -1,8 +1,8 @@
 <?php defined("_JEXEC") or die("Acesso Restrito."); JHTML::_("behavior.modal"); ?>
 <script type="text/javascript">
 	jQuery(function($){
-		$("#documentocnpj").mask("99.999.999/9999-99");
-		$("#documentocpf").mask("999.999.999-99");
+//		$("#documentocnpj").mask("99.999.999/9999-99");
+//		$("#documentocpf").mask("999.999.999-99");
 		$("#cep").mask("99999-999");
 		$("#telefone1").mask("(99)9999-9999");
 		$("#telefone2").mask("(99)9999-9999");
@@ -25,14 +25,23 @@
 		</div>
 		<div class="linha">
 			<div class="chave">
-				<label>Tipo de documento:</label>
+				<label>Tipo de pessoa:</label>
 			</div>
 			<div class="campo">
-				<?php echo $this->tipoDocumento; ?>
+				<?php echo $this->tipoPessoa; ?>
 			</div>
 			<div class="clear separador"></div>
 		</div>
-		<div class="linha" id="linhaDocumentocpf" style="display:none;">
+		<div class="linha">
+			<div class="chave">
+				<label>Documento:</label>
+			</div>
+			<div class="campo" style="float: left; width: 300px">
+				O documento não será obtido agora, posteriormente um atendente irá entrar em contato para obter estes dados.
+			</div>
+			<div class="clear separador"></div>
+		</div>
+<!--		<div class="linha" id="linhaDocumentocpf" style="display:none;">
 			<div class="chave">
 				<label>CPF:</label>
 			</div>
@@ -49,7 +58,7 @@
 				<input class="inputbox" type="text" name="documento[]" id="documentocnpj" value="" />
 			</div>
 			<div class="clear separador"></div>
-		</div>
+		</div>-->
 		<div class="linha" id="linhaTipoEmpresa" style="display:none;">
 			<div class="chave">
 				<label>Tipo de Empresa:</label>

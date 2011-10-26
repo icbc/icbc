@@ -12,6 +12,9 @@ class TableProjeto extends JTable{
 	public $conta = null;
 	public $dataPublicacao = null;
 	public $dataHoraCad = null;
+	public $resumo = null;
+	public $arquivoDetalhamento = null;
+	
 	public function __construct(&$db) {
 		parent::__construct("#__mecenato_projeto", "id", $db);
 	}

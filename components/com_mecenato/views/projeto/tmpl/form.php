@@ -93,9 +93,25 @@
 			</div>
 			<div class="clear separador"></div>
 		</div>
+		<div class="linha">
+			<div class="campo">
+				<label for="descricao">Resumo do projeto</label>
+				<?php echo $this->editor->display( 'resumo',  "" , '100%', '150', '75', '180' ); ;?>
+			</div>
+		</div>
+		<div class="linha">
+			<div class="chave">
+				<label>Detalhamento do projeto consolidado:</label>
+			</div>
+			<div class="campo">
+				<input class="file" type="file" name="arquivoDetalhamento" />
+			</div>
+			<div class="clear separador"></div>
+		</div>
 		<div class="botao">
 			<button type="submit" name="task" value="salvar" > Envair </button>
 		</div>
 		<input type="hidden" name="controller" value="projeto" />
+		<input type="hidden" name="idProponente" value="<?php echo $this->idProponente ?>" />
 	</form>
 </div>

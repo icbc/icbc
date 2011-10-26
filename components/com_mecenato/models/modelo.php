@@ -8,11 +8,16 @@ class Modelo extends JModel {
 	protected $id;
 	protected $campos = "*";
 	protected $dados;
-	private $tabela;
-	private $post;
-	private $file;
+	protected $tabela;
+	protected $post;
+	protected $file;
 	protected $complemento = "";
 	private $dir = "components/com_mecenato/auxiliares/arquivos/";
+	protected $objDB = null;
+	public function __construct($config = array()) {
+		$this->objDB =& JFactory::getDBO();
+		parent::__construct($config);
+	}
 	public function __get($name) {
 		return $this->$name;
 	}
@@ -22,10 +27,12 @@ class Modelo extends JModel {
 	public function armazena(){
 		$tabela = $this->getTable($this->tabela);
 		$this->post["dataHoraCad"] = date("Y-m-d H:i:s");
+		$tabela->save($this->post);
 		if($tabela->save($this->post)){
 			return $tabela;
 		}
 		else{
+			$this->setError("Registro não salvo");
 			return false;
 		}
 	}
@@ -79,7 +86,7 @@ class Modelo extends JModel {
 				if($file)
 					return true;
 				else{
-					$modelo->setError("Erro ao gravar o arquivo: {$this->getError()}");
+					$this->setError("Erro ao gravar o arquivo: {$this->getError()}");
 					return false;
 				}
 			}
@@ -110,14 +117,17 @@ class Modelo extends JModel {
 	}
 	public function listaDados(){
 		$sql = " SELECT {$this->campos} FROM #__mecenato_{$this->tabela} {$this->complemento}";
-		$objDB =& JFactory::getDBO();
-		$objDB->setQuery($sql);
-		$this->dados = $objDB->loadObjectList();
+		$this->objDB->setQuery($sql);
+		$this->dados = $this->objDB->loadObjectList();
 	}
 	public function pegaDado(){
 		$sql = " SELECT {$this->campos} FROM #__mecenato_{$this->tabela} {$this->complemento} ";
-		$objDB =& JFactory::getDBO();
-		$objDB->setQuery($sql);
-		$this->dados = $objDB->loadObject();
+		$this->objDB->setQuery($sql);
+		$this->dados = $this->objDB->loadObject();
+	}
+	function verificaRelacaoUser($idUser){
+		$sql = "SELECT id FROM #__mecenato_{$this->tabela} WHERE idUser = {$idUser}";
+		$this->objDB->setQuery($sql);
+		return $this->objDB->loadResult();
 	}
 }

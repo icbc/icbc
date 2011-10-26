@@ -1,11 +1,11 @@
-<?php defined("_JEXEC") or die("Acesso Restrito"); JHTML::_("behavior.calendar");?>
+<?php defined("_JEXEC") or die("Acesso Restrito"); JHTML::_("behavior.calendar"); JHTML::_('behavior.tooltip');?>
 <div class="clear separador"></div>
 <div id="componente">
 	<div class="itemObrigatorio">
 		* Itens obrigatórios
 	</div>
 	<div class="clear separador"></div>
-	<form action="<?php echo $this->url; ?>" method="post">
+	<form action="<?php echo $this->url["form"]; ?>" method="post">
 		<div class="linha">
 			<div class="chave">
 				<label for="campo">Projeto a ser patrocinado: </label>
@@ -20,7 +20,12 @@
 				<label for="campo">Patrocínio em nome de:</label>
 			</div>
 			<div class="campo">
-				<?echo ($this->incentivador->nome)?$this->incentivador->nome:$this->select["incentivador"];?>
+				<div style="float: left;">
+					<?echo ($this->incentivador->nome)?$this->incentivador->nome:$this->select["incentivador"];?>
+				</div>
+				<a href="<?php echo $this->url["novoIncantivador"] ?>" target="_blank">
+					<img class="editlinktip hasTip" title="Cadastro de novo Incentivador::Para adicionar um Incentivador que não esteja cadastrado na lista clique aqui" style="float:left;" alt="Novo Incentivador" src="components/com_mecenato/auxiliares/imagens/invetnviador.png" />
+				</a>
 			</div>
 			<div class="clear separador"></div>
 		</div>

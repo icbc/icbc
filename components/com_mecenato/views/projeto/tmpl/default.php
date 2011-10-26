@@ -5,7 +5,7 @@
 		<input type="text" name="busca" id="busca" />
 	</form>
 </div>
-<!-- adicionar verificador que permitira se um determinado usuário tem acesso ou não a esta área -->
+<?php if($this->idProponente > 0): ?>
 <div class="novoProjeto">
 	<a href="<? echo $this->url["novo"]; ?>">
 		<img alt="Novo Cadastro" src="components/com_mecenato/auxiliares/imagens/novo.png" />
@@ -14,6 +14,7 @@
 		</div>
 	</a>
 </div>
+<?php endif; ?>
 <div class="clear"></div>
 <table class="tabelaProjeto">
 	<thead>

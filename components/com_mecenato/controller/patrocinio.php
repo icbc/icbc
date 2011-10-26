@@ -15,6 +15,22 @@ class MecenatoFrontControllerPatrocinio extends MecenatoFrontController {
 		$objProponente = $modelo->armazena();
 		$this->setRedirect($this->link, "Cadastros realizado com sucesso");
 	}
+	public function visao(){
+		$view = JRequest::getVar("view","patrocinio");
+		$objUser =& JFactory::getUser();
+		$modelo =& $this->getModel("patrocinio");
+		$modelo->tabela = "incentivador";
+		if($modelo->verificaRelacaoUser($objUser->id) == null && $objUser->gid < 18){
+			$itemId = JRequest::getVar("Itemid");
+			$this->setRedirect(
+					"index.php?option=com_user&view=login&Itemid={$itemId}", 
+					"Usuário não registrado com este tipo de perfil", 
+					"error"
+					);
+		}
+		JRequest::setVar("view",$view);
+		parent::display();
+	}
 }
 
 ?>

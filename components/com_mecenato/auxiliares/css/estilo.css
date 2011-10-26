@@ -32,3 +32,13 @@
 .linkMecenato{
 	color: #304991;
 }
+.detalhamento{
+	margin-bottom: 10px;
+}
+.corpoProjeto{
+	margin-bottom: 10px;
+}
+.corpoProjeto .logo{
+	float: right;
+	margin: 10px;
+}
