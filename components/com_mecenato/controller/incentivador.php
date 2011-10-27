@@ -12,6 +12,7 @@ class MecenatoFrontControllerIncentivador extends MecenatoFrontController{
 		$post = JRequest::get("post");
 		$post["documento"] = $post["documento"][$post["tipoDocumento"]];
 		$modelo->post = $post;
+		$modelo->enviarEmail();
 		$modelo->armazenaJUser();
 		$modelo->tabela = "incentivador";
 		$objProponente = $modelo->armazena();

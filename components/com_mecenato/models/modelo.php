@@ -140,4 +140,21 @@ class Modelo extends JModel {
 		$this->objDB->setQuery($sql);
 		return $this->objDB->loadResult();
 	}
+	public function enviarEmail(){
+		$objMail =& JFactory::getMailer();
+		$objConfig =& JFactory::getConfig();
+		$enviar = array(
+			$objConfig->getValue("config.mailfrom"),
+			$objConfig->getValue("config.fromname")
+		);
+		$objMail->setSender($enviar);
+		$objUser =& JFactory::getUser();
+		$receber = array("lucasemmanoel@gmail.com");
+		$objMail->addRecipient($receber);
+		$corpoEmail = "O corpo do email \n com uma quebra de linha aonde consigo adicionar\n mais algumas linhas";
+		$objMail->setSubject("Assunto do email");
+		$objMail->setBody($corpoEmail);
+		$objMail->addAttachment(JPATH_COMPONENT.DS."auxiliares".DS."imagens".DS."confirmado.png");
+		$envio =& $objMail->Send();
+	}
 }
