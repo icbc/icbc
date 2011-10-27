@@ -95,15 +95,25 @@ class Modelo extends JModel {
 	public function organizaData($arrayCampos, $formato = "gravar"){
 		$i = 0;
 		if($formato == "exibir"){
-			foreach($this->dados as $obj){
-				foreach($obj as $chave => $valor){
-					foreach($arrayCampos as $campo){
-						if($chave == $campo)
-							$this->dados[$i]->$chave = implode("/",  array_reverse(explode("-", $valor)));
+			if(is_array($this->dados)){
+				foreach($this->dados as $obj){
+					foreach($obj as $chave => $valor){
+						foreach($arrayCampos as $campo){
+							if($chave == $campo)
+								$this->dados[$i]->$chave = implode("/",  array_reverse(explode("-", $valor)));
 
+						}
+					}
+					$i++;
+				}
+			}elseif(is_object($this->dados)){
+				foreach($this->dados as $chave => $valor){
+					foreach($arrayCampos as $campo){
+						if($chave == $campo){
+							$this->dados->$chave = implode("/",  array_reverse(explode("-", $valor)));
+						}
 					}
 				}
-				$i++;
 			}
 		}
 		if($formato == "gravar"){

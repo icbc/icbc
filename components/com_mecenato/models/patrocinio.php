@@ -27,4 +27,14 @@ class MecenatoFrontModelPatrocinio extends Modelo{
 		$this->objDB->setQuery($sql);
 		$this->dados = $this->objDB->loadObject();
 	}
+	public function modificaStatus( $id, $status ){
+		if($status == 1 ){
+			$status = 0;
+		}elseif($status == 0){
+			$status = 1;
+		}
+		$sql = "UPDATE #__mecenato_patrocinio SET status = {$status} WHERE id = {$id}";
+		$this->objDB->setQuery($sql);
+		return $this->objDB->query();
+	}
 }

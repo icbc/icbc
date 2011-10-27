@@ -57,7 +57,15 @@
 		<?php $i = 0; 
 		foreach($this->registros as $obj) : ?>
 		<tr class="row<?php echo $i%2; ?>">
-			<td class="esquerda"><?php echo $obj->incentivador; ?></td>
+			<td class="esquerda">
+				<?php if( $this->user->gid > 20 ): ?>
+				<a href="<?php echo $this->url["edita"]."&idPat={$obj->id}" ?>">
+				<?php endif; ?>
+					<?php echo $obj->incentivador; ?>
+				<?php if( $this->user->gid > 20 ): ?>
+				</a>
+				<?php endif; ?>
+			</td>
 			<td class="centro">
 				R$<?php echo number_format($obj->valor, 2, ",", "."); ?>
 			</td>
@@ -75,14 +83,22 @@
 					break;
 					case 2:
 						$imagem = "cancelado";
-						$status = "Pagamento Cancelado";
+						$status = "Pagamento cancelado";
 					break;
 					default:
 						$imagem = "erro";
 					break;
 				}
+				if($obj->status != 2 && $this->user->gid > 20 ):
 				?>
+				<a href="<?php echo $this->url["status"]."&idPat={$obj->id}&status={$obj->status}" ?>">
+				<?php endif; ?>
 				<img class="editlinktip hasTip" title="Status do pagamento::<?php echo $status; ?>" src="components/com_mecenato/auxiliares/imagens/<?php echo $imagem; ?>.png" />
+				<?php 
+				if($imagem != "cancelamento" && $this->user->gid > 20 ):
+				?>
+				</a>
+				<?php endif; ?>
 			</td>
 		</tr>
 		<?php $i++; endforeach; ?>

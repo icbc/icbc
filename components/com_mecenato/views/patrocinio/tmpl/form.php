@@ -36,7 +36,7 @@
 				<label for="campo">Valor: </label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="valor" id="valor" value="" />
+				<input class="inputbox" type="text" name="valor" id="valor" value="<?php echo $this->patrocinio->valor ?>" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -45,7 +45,7 @@
 				<label for="campo">Data do Depósito: </label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" style="float:left;" type="text" name="dataRecebido" id="dataRecebido" value="<?php echo date("d/m/Y") ?>"/>
+				<input class="inputbox" style="float:left;" type="text" name="dataRecebido" id="dataRecebido" value="<?php echo ($this->patrocinio->dataRecebido)? $this->patrocinio->dataRecebido :  date("d/m/Y") ?>"/>
 					<img alt="calendario" style="float:left;" id="dataRecebidoImg" src="components/com_mecenato/auxiliares/imagens/calendar.png" />
 					<script type ="text/javascript">
 					Calendar.setup(
@@ -80,7 +80,7 @@
 				<label for="campo">Especificar Doação/Patrocínio: </label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="especificarAvaliacao" value="" />
+				<input class="inputbox" type="text" name="especificarAvaliacao" value="<?php echo $this->patrocinio->especificarAvaliacao ?>" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
@@ -89,10 +89,23 @@
 				<label for="campo">Forma de Avaliação de Doação/Patrocínio: </label>
 			</div>
 			<div class="campo">
-				<input class="inputbox" type="text" name="formaAvaliacao" value="" />
+				<input class="inputbox" type="text" name="formaAvaliacao" value="<?php echo $this->patrocinio->formaAvaliacao ?>" />
 			</div>
 			<div class="clear separador"></div>
 		</div>
+		<?php 
+		if($this->patrocinio->id):
+		?>
+		<div class="linha">
+			<div class="chave">
+				<label for="campo">Situação: </label>
+			</div>
+			<div class="campo">
+				<?php echo $this->select["status"]; ?>
+			</div>
+			<div class="clear separador"></div>
+		</div>
+		<?php endif; ?>
 		<div class="botao">
 			<button type="submit" name="task" value="salvar" > Envair </button>
 		</div>
@@ -102,6 +115,11 @@
 			<input type="hidden" name="idIncentivador" value="<?php echo $this->incentivador->id ?>" />
 		<?php endif; ?>
 		<input type="hidden" name="idProjeto" value="<?php echo $this->projeto->id; ?>" />
+		<?php 
+		if($this->patrocinio->id):
+		?>
+		<input type="hidden" name="id" value="<?php echo $this->patrocinio->id ?>" />
+		<?php endif; ?>
 		<input type="hidden" name="controller" value="patrocinio" />
 	</form>
 </div>

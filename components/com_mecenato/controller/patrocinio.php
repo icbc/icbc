@@ -4,7 +4,6 @@ class MecenatoFrontControllerPatrocinio extends MecenatoFrontController {
 	private $get;
 	function salvar(){
 		$this->get = JRequest::get("get");
-		$this->link .= "&view=projeto&Itemid=".JRequest::getVar("Itemid");
 		$modelo = $this->getModel("patrocinio");
 		$post = array();
 		$post = JRequest::get("post");
@@ -13,7 +12,25 @@ class MecenatoFrontControllerPatrocinio extends MecenatoFrontController {
 		$arrayCampos = array("dataRecebido");
 		$modelo->organizaData($arrayCampos);
 		$objProponente = $modelo->armazena();
-		$this->setRedirect($this->link, "Cadastros realizado com sucesso");
+		if($post["id"] == null){
+			$this->link .= "&view=projeto&Itemid=".JRequest::getVar("Itemid");
+			$this->setRedirect($this->link, "Cadastros realizado com sucesso");
+		}
+		else{
+			$this->link .= "&view=patrocinio&tpl=patrocinio&Itemid=".JRequest::getVar("Itemid")."&id={$post["idProjeto"]}";
+			$this->setRedirect($this->link, "Cadastros realizado com sucesso");
+		}
+	}
+	public function status(){
+		$status = JRequest::getVar("status", null);
+		$idPat = JRequest::getVar("idPat", null);
+		$id = JRequest::getVar("id",null);
+		$itemId = JRequest::getVar("Itemid",null);
+		$this->link .= "&view=patrocinio&tpl=patrocinio&Itemid={$itemId}&id={$id}";
+		$modelo =& $this->getModel("patrocinio");
+		if($modelo->modificaStatus($idPat, $status)){
+			$this->setRedirect($this->link."&view=patrocinio");
+		}
 	}
 	public function visao(){
 		$view = JRequest::getVar("view","patrocinio");
