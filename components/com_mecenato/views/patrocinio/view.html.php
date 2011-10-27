@@ -3,6 +3,8 @@ defined("_JEXEC") or die("Acesso Restrito");
 jimport("joomla.application.component.view");
 class MecenatoFrontViewPatrocinio extends JView {
 	public function display($tpl = null) {
+		$layout = JRequest::getVar("layout",null);
+		$tpl = JRequest::getVar("tpl", null);
 		$objDoc =& JFactory::getDocument();
 		$objUser =& JFactory::getUser();
 		$itemId = JRequest::getVar("Itemid",null);
@@ -10,7 +12,7 @@ class MecenatoFrontViewPatrocinio extends JView {
 		$id = JRequest::getVar("id",null);
 		$modelo =& $this->getModel();
 		$modelo->tabela = "incentivador";
-		if($id){
+		if($layout == "form"){
 			$modelo->tabela = "projeto";
 			$modelo->campos = " id, nome, logo, numPronac ";
 			$modelo->complemento = "WHERE id = {$id}";
@@ -39,18 +41,29 @@ class MecenatoFrontViewPatrocinio extends JView {
 			$select["formaIncentivo"] = JHTML::_("select.genericlist", $arrFormaIncentivo, "formaIncentivo");
 			$url["form"] = "index.php?option=com_mecenato&view=patrocinio&id={$id}&Itemid={$itemId}";
 			$url["novoIncantivador"] = "index.php?option=com_mecenato&view=incentivador&Itemid={$itemId}";
-		}else{
+		}elseif($layout == null && $tpl == null){
 			$modelo->tabela = "patrocinio";
-			$modelo->campos = " pro.nome as projeto, pro.numPronac as pronac, inc.nome as incentivador, par.valor, par.dataRecebido ";
-			$modelo->complemento = " as par INNER JOIN #__mecenato_projeto AS pro ON pro.id = par.idProjeto ";
-			$modelo->complemento .= " INNER JOIN #__mecenato_incentivador AS inc ON inc.id = par.idIncentivador ";
+			$modelo->listaProjetos();
+			$url = "index.php?option=com_mecenato&view=patrocinio&tpl=patrocinio&Itemid={$itemId}";
+			$this->assignRef("registros", $modelo->dados );
+		}
+		elseif($tpl == "patrocinio"){
+			$modelo->tabela = "patrocinio";
+			$modelo->campos = " inc.nome as incentivador, par.valor, par.dataRecebido, par.status ";
+			$modelo->complemento .= " as par INNER JOIN #__mecenato_incentivador AS inc ON inc.id = par.idIncentivador ";
+			$modelo->complemento .= " WHERE par.idProjeto = {$id} ORDER BY par.dataRecebido ";
 			$modelo->listaDados();
-			echo JUtility::dump($modelo);
 			$arr = array("dataRecebido");
 			$modelo->organizaData($arr, "exibir");
 			$url = "index.php?option=com_mecenato&view=patrocinio&Itemid={$itemId}";
-			$url["novoIncantivador"] = "index.php?option=com_mecenato&view=incentivador&Itemid={$itemId}";
 			$this->assignRef("registros", $modelo->dados );
+			$modelo->somasProjetos($id);
+			$this->assignRef("somas", $modelo->dados );
+			$modelo->tabela = "projeto";
+			$modelo->campos = " id, nome, numPronac ";
+			$modelo->complemento = "WHERE id = {$id}";
+			$modelo->pegaDado();
+			$objProjeto = $modelo->dados;
 		}
 		$this->assignRef("projeto", $objProjeto);
 		$this->assignref("incentivador", $objIncentivador);

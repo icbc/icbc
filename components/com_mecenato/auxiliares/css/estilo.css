@@ -27,7 +27,21 @@
 }
 .tabelaProjeto tr{
 	height: 32px;
-	border: 1px solid #000;
+}
+.tabelaProjeto tr.row0{
+	background-color: #a0b4c8;
+}
+.tabelaProjeto tr.row1{
+	background-color: #ecd96c;
+}
+.tabelaProjeto .centro{
+	text-align: center;
+}
+.tabelaProjeto .esquerda{
+	text-align: left;
+}
+.tabelaProjeto a{
+	color:#304991;
 }
 .linkMecenato{
 	color: #304991;
@@ -41,4 +55,14 @@
 .corpoProjeto .logo{
 	float: right;
 	margin: 10px;
+}
+.valor{
+	float: left;
+}
+.campoTitulo{
+	float: left;
+	font-weight: bolder;
+	width: 170px;
+	text-align: right;
+	margin-right: 5px;
 }
