@@ -168,7 +168,7 @@
 			<div class="clear separador"></div>
 		</div>
 		<div class="botao">
-			<button type="submit" name="task" value="salvar" > Envair </button>
+			<button type="submit" name="task" value="salvar" > Enviar </button>
 		</div>
 		<input type="hidden" name="controller" value="proponente" />
 	</form>

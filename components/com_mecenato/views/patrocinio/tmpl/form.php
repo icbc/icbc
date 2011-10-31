@@ -107,7 +107,7 @@
 		</div>
 		<?php endif; ?>
 		<div class="botao">
-			<button type="submit" name="task" value="salvar" > Envair </button>
+			<button type="submit" name="task" value="salvar" > Enviar </button>
 		</div>
 		<?php 
 		if($this->incentivador->id):
